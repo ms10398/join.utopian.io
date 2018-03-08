@@ -8,6 +8,10 @@ body {
 
 /* buttons / links */
 
+.btn {
+    border-radius: 2px;
+}
+
 .btn-primary,
 .btn-secondary {
     box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
@@ -161,6 +165,11 @@ a:active {
     line-height: 2.6rem;
 }
 
+#content .lead.small {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
 #content .blue-icon {
     box-sizing: content-box;
     width: 33px;
@@ -309,6 +318,51 @@ a:active {
 
 #faq-accordion .card-body {
     padding: 0 1rem 1rem;
+}
+
+#steem-logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+#steem-logo-container:after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    margin-left: 25%;
+    height: 16px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%/8px;
+    filter: blur(5px);
+}
+
+#steem-logo-container #steem-logo {
+    width: 250px;
+    max-width: 250px;
+    position: relative;
+}
+
+#steem-logo-container .upvote {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #4b7dc0;
+    background: #fff;
+    border: solid 2px #4b7dc0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 14px;
+    text-align: center;
+}
+
+#steem-logo-container .upvote svg {
+    fill: #4b7dc0;
+    position: absolute;
+    top: -2px;
+    left: -2px;
 }
 
 /* footer */
