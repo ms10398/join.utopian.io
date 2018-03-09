@@ -347,6 +347,14 @@ a:active {
     font-weight: 700;
 }
 
+#faq-accordion h1,
+#faq-accordion h2,
+#faq-accordion h3,
+#faq-accordion h4,
+#faq-accordion h5 {
+    font-size: 1rem;
+}
+
 #faq-accordion .card {
     background: #fff;
     border: solid 1px #e0e2e5;

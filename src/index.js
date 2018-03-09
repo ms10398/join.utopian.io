@@ -5,8 +5,11 @@ import './index.css';
 
 const $ = require('jquery');
 
-// contribution categories
 const contributionCategories = $('#contribution-categories');
+const projectOwnerCategories = $('#project-owner-categories');
+const faqAccordion = $('#faq-accordion');
+
+// contribution categories
 
 let stopLeaveContributionCategory = false,
     hoveringContributionCategory = false;
@@ -39,8 +42,6 @@ $(document).on('mouseleave', '#contribution-categories .circle', function() {
 });
 
 // project owner categories
-const projectOwnerCategories = $('#project-owner-categories');
-
 let stopLeaveProjectOwnerCategory = false,
     hoveringProjectOwnerCategory = false;
 $(document).on('mouseenter', '#project-owner-categories .circle', function() {
@@ -90,6 +91,73 @@ upvotesTimeline
   .staggerFrom('.upvote', .5, {scale: 0, opacity: 0, ease: Back.easeOut.config(4)}, 1)
   .staggerTo('.upvote', 2, {bottom: "+=25", opacity: 0, ease: Power1.easeInOut}, 1, '-=5');
 
+
+// faq
+
+$.get('https://api.utopian.io/api/faq', (response) => {
+  let faq = {};
+  for (let i = 0; i < response.results.length; i++) {
+    if (!faq.hasOwnProperty(response.results[i]['category'])) {
+      faq[response.results[i]['category']] = [];
+    }
+
+    faq[response.results[i]['category']].push(response.results[i]);
+  }
+
+  renderFaq('general', 'General', faq);
+  renderFaq('earning_rewards', 'Earning Rewards', faq);
+  renderFaq('sharing_contributions', 'Sharing Contributions', faq);
+  renderFaq('managing_projects', 'Managing Projects', faq);
+});
+
+// helpers
 function randomNumberBetween(min, max) {
   return min + Math.random() * (max - min);
+}
+
+function renderFaq(categoryId, categoryName, faq) {
+  let template = `
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <a href="#collapse${categoryId}" class="btn btn-link" data-toggle="collapse">
+                ${categoryName}
+            </a>
+        </h5>
+    </div>
+
+    <div id="collapse${categoryId}" class="collapse" data-parent="#faq-accordion">
+        <div class="card-body">
+          <div id="faq-accordion-${categoryId}"></div>
+        </div>
+    </div>
+</div>
+`;
+
+  faqAccordion.append(template);
+  renderFaqQuestions(categoryId, faq[categoryId]);
+}
+
+function renderFaqQuestions(categoryId, questions) {
+  for (let i = 0; i < questions.length; i++) {
+    let template = `
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <a href="#collapse${questions[i].hash}" class="btn btn-link" data-toggle="collapse">
+                ${questions[i].title}
+            </a>
+        </h5>
+    </div>
+
+    <div id="collapse${ questions[i].hash }" class="collapse" data-parent="#faq-accordion-${categoryId}">
+        <div class="card-body">
+          ${questions[i].html}
+        </div>
+    </div>
+</div>
+`;
+
+    $('#faq-accordion-' + categoryId).append(template);
+  }
 }
