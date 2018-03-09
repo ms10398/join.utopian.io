@@ -3,6 +3,74 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'gsap';
 import './index.css';
 
+const $ = require('jquery');
+
+// contribution categories
+const contributionCategories = $('#contribution-categories');
+
+let stopLeaveContributionCategory = false,
+    hoveringContributionCategory = false;
+$(document).on('mouseenter', '#contribution-categories .circle', function() {
+  stopLeaveContributionCategory = true;
+  hoveringContributionCategory = true;
+  TweenMax.to(contributionCategories.find('.text'), .2, {opacity: 0, onComplete: () => {
+    TweenMax.to(contributionCategories.find('.text-' + $(this).data('toggle')), .2, {opacity: 1, onComplete: () => {
+      stopLeaveContributionCategory = false;
+      if (!hoveringContributionCategory) {
+        TweenMax.to(contributionCategories.find('.text'), .2, {opacity: 0, onComplete: () => {
+          TweenMax.to(contributionCategories.find('.text-main'), .2, {opacity: 1, onComplete: () => {
+            stopLeaveContributionCategory = false;
+          }});
+        }});
+      }
+    }});
+  }});
+});
+
+$(document).on('mouseleave', '#contribution-categories .circle', function() {
+  hoveringContributionCategory = false;
+  if (!stopLeaveContributionCategory) {
+    TweenMax.to(contributionCategories.find('.text'), .2, {opacity: 0, onComplete: () => {
+      TweenMax.to(contributionCategories.find('.text-main'), .2, {opacity: 1, onComplete: () => {
+        stopLeaveContributionCategory = false;
+      }});
+    }});
+  }
+});
+
+// project owner categories
+const projectOwnerCategories = $('#project-owner-categories');
+
+let stopLeaveProjectOwnerCategory = false,
+    hoveringProjectOwnerCategory = false;
+$(document).on('mouseenter', '#project-owner-categories .circle', function() {
+  stopLeaveProjectOwnerCategory = true;
+  hoveringProjectOwnerCategory = true;
+  TweenMax.to(projectOwnerCategories.find('.text'), .2, {opacity: 0, onComplete: () => {
+    TweenMax.to(projectOwnerCategories.find('.text-' + $(this).data('toggle')), .2, {opacity: 1, onComplete: () => {
+      stopLeaveProjectOwnerCategory = false;
+      if (!hoveringProjectOwnerCategory) {
+        TweenMax.to(projectOwnerCategories.find('.text'), .2, {opacity: 0, onComplete: () => {
+          TweenMax.to(projectOwnerCategories.find('.text-main'), .2, {opacity: 1, onComplete: () => {
+            stopLeaveProjectOwnerCategory = false;
+          }});
+        }});
+      }
+    }});
+  }});
+});
+
+$(document).on('mouseleave', '#project-owner-categories .circle', function() {
+  hoveringProjectOwnerCategory = false;
+  if (!stopLeaveProjectOwnerCategory) {
+    TweenMax.to(projectOwnerCategories.find('.text'), .2, {opacity: 0, onComplete: () => {
+      TweenMax.to(projectOwnerCategories.find('.text-main'), .2, {opacity: 1, onComplete: () => {
+        stopLeaveProjectOwnerCategory = false;
+      }});
+    }});
+  }
+});
+
 // generate upvotes on steem logo...
 for (let i = 0; i < 6; i++) {
   let bubble = document.createElement('span');

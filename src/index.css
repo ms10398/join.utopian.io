@@ -210,40 +210,95 @@ a:active {
     text-align: center;
 }
 
-.circle:hover {
-    border-color: #fff;
-    transform: scale(1.1);
-}
-
-.circle:hover svg, .circle.hover svg {
-    fill: #fff !important;
+.circle svg {
     transition: fill .3s ease;
 }
 
+.circle:hover {
+    transform: scale(1.1);
+    border-color: transparent;
+}
+
 .circle.suggestions svg { fill: #4dd39f; }
-.circle.suggestions:hover, .circle.suggestions.hover { background: #4dd39f; }
 .circle.sub-projects svg { fill: #9fdb8e; }
-.circle.sub-projects:hover, .circle.sub-projects.hover { background: #9fdb8e; }
 .circle.development svg { fill: #000; }
-.circle.development:hover, .circle.development.hover { background: #000; }
 .circle.bug-hunting svg { fill: #db524c; }
-.circle.bug-hunting:hover, .circle.bug-hunting.hover { background: #db524c; }
 .circle.translation svg { fill: #ffcf26; }
-.circle.translation:hover, .circle.translation.hover { background: #ffcf26; }
 .circle.graphics svg { fill: #f8a700; }
-.circle.graphics:hover, .circle.graphics.hover { background: #f8a700; }
 .circle.analysis svg { fill: #174265; }
-.circle.analysis:hover, .circle.analysis.hover { background: #174265; }
 .circle.visibility svg { fill: #7bc0f5; }
-.circle.visibility:hover, .circle.visibility.hover { background: #7bc0f5; }
 .circle.documentation svg { fill: #a0a0a0; }
-.circle.documentation:hover, .circle.documentation.hover { background: #a0a0a0; }
 .circle.tutorials svg { fill: #792a51; }
-.circle.tutorials:hover, .circle.tutorials.hover { background: #792a51; }
 .circle.video-tutorials svg { fill: #ec3424; }
-.circle.video-tutorials:hover, .circle.video-tutorials.hover { background: #ec3424; }
 .circle.copywriting svg { fill: #007f80; }
-.circle.copywriting:hover, .circle.copywriting.hover { background: #007f80; }
+
+.circle.suggestions:hover { background: #4dd39f; }
+.circle.sub-projects:hover { background: #9fdb8e; }
+.circle.development:hover { background: #000; }
+.circle.bug-hunting:hover { background: #db524c; }
+.circle.translation:hover { background: #ffcf26; }
+.circle.graphics:hover { background: #f8a700; }
+.circle.analysis:hover { background: #174265; }
+.circle.visibility:hover { background: #7bc0f5; }
+.circle.documentation:hover { background: #a0a0a0; }
+.circle.tutorials:hover { background: #792a51; }
+.circle.video-tutorials:hover { background: #ec3424; }
+.circle.copywriting:hover { background: #007f80; }
+
+.circle:hover svg,
+.circle.reverse svg {
+    fill: #fff;
+}
+
+.circle.reverse.suggestions { background: #4dd39f; }
+.circle.reverse.sub-projects { background: #9fdb8e; }
+.circle.reverse.development { background: #000; }
+.circle.reverse.bug-hunting { background: #db524c; }
+.circle.reverse.translation { background: #ffcf26; }
+.circle.reverse.graphics { background: #f8a700; }
+.circle.reverse.analysis { background: #174265; }
+.circle.reverse.visibility { background: #7bc0f5; }
+.circle.reverse.documentation { background: #a0a0a0; }
+.circle.reverse.tutorials { background: #792a51; }
+.circle.reverse.video-tutorials { background: #ec3424; }
+.circle.reverse.copywriting { background: #007f80; }
+
+.circle.reverse.suggestions:hover svg { fill: #4dd39f; }
+.circle.reverse.sub-projects:hover svg { fill: #9fdb8e; }
+.circle.reverse.development:hover svg { fill: #000; }
+.circle.reverse.bug-hunting:hover svg { fill: #db524c; }
+.circle.reverse.translation:hover svg { fill: #ffcf26; }
+.circle.reverse.graphics:hover svg { fill: #f8a700; }
+.circle.reverse.analysis:hover svg { fill: #174265; }
+.circle.reverse.visibility:hover svg { fill: #7bc0f5; }
+.circle.reverse.documentation:hover svg { fill: #a0a0a0; }
+.circle.reverse.tutorials:hover svg { fill: #792a51; }
+.circle.reverse.video-tutorials:hover svg { fill: #ec3424; }
+.circle.reverse.copywriting:hover svg { fill: #007f80; }
+
+.circle.reverse:hover {
+    background: #fff;
+}
+
+#contribution-categories .text,
+#project-owner-categories .text {
+    opacity: 0;
+    position: absolute;
+}
+
+#contribution-categories .text-main,
+#project-owner-categories .text-main {
+    opacity: 1;
+}
+
+#project-owner-categories {
+    min-height: 500px;
+}
+
+#project-owner-categories .circle {
+    position: absolute;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .2);
+}
 
 .two-columns {
     column-count: 2;
