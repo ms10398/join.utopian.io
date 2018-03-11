@@ -108,7 +108,7 @@
                         <a class="nav-link" href="https://signup.utopian.io">Sign Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://v2.steemconnect.com/oauth2/authorize?client_id=utopian.app&response_type=code&redirect_uri=https%3A%2F%2Futopian.io%2Fcallback&scope=vote,comment,comment_delete,comment_options,custom_json,claim_reward_balance,offline">Login</a>
+                        <a class="nav-link" href="#scRedirectModal" data-toggle="modal">Login</a>
                     </li>
                 </ul>
             </div>
@@ -121,7 +121,7 @@
     <h2 class="mt-4 mb-5">Earn rewards by contributing to your<br />favorite Open Source projects!</h2>
     <div>
         <a href="https://signup.utopian.io" class="btn btn-primary btn-lg mr-4">Sign Up</a>
-        <a href="https://v2.steemconnect.com/oauth2/authorize?client_id=utopian.app&response_type=code&redirect_uri=https%3A%2F%2Futopian.io%2Fcallback&scope=vote,comment,comment_delete,comment_options,custom_json,claim_reward_balance,offline" class="btn btn-secondary btn-lg ml-4">Log In</a>
+        <a href="#scRedirectModal" class="btn btn-secondary btn-lg ml-4" data-toggle="modal">Log In</a>
     </div>
 </div>
 
@@ -610,6 +610,26 @@
                     <a href="https://twitter.com/utopian_io" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://github.com/utopian-io" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="scRedirectModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Login with SteemConnect</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                You will be redirected to SteemConnect to authenticate to the Steem blockchain. SteemConnect is developed and maintained by Steemit, Inc. and Busy.org. Utopian.io will never access your private keys.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="https://v2.steemconnect.com/oauth2/authorize?client_id=utopian.app&response_type=code&redirect_uri=https%3A%2F%2Futopian.io%2Fcallback&scope=vote,comment,comment_delete,comment_options,custom_json,claim_reward_balance,offline" class="btn btn-primary">Login with SteemConnect</a>
             </div>
         </div>
     </div>
