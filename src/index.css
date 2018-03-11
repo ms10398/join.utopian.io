@@ -484,6 +484,7 @@ a:active {
     display: inline-block;
     padding-top: 3px !important;
     padding-bottom: 3px !important;
+    margin: 0 !important;
 }
 
 #footer .nav-link:hover {
