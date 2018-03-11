@@ -2,12 +2,14 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'gsap';
 import './index.css';
+import './sliders';
+import './sliders.css';
 
 const $ = require('jquery');
+const helpers = require('./helpers');
 
 const contributionCategories = $('#contribution-categories');
 const projectOwnerCategories = $('#project-owner-categories');
-const faqAccordion = $('#faq-accordion');
 
 // contribution categories
 
@@ -78,9 +80,9 @@ for (let i = 0; i < 6; i++) {
   bubble.classList.add('upvote');
   bubble.innerHTML = '<svg style="width: 20px; height: 20px;" viewBox="0 0 24 24"><path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" /></svg>';
   TweenLite.set(bubble, {
-    left: randomNumberBetween(0, 100) + '%',
-    bottom: randomNumberBetween(0, 100) + '%',
-    scale: randomNumberBetween(.5, 2)
+    left: helpers.randomNumberBetween(0, 100) + '%',
+    bottom: helpers.randomNumberBetween(0, 100) + '%',
+    scale: helpers.randomNumberBetween(.5, 2)
   });
   document.getElementById('steem-logo-container').appendChild(bubble);
 }
@@ -93,7 +95,6 @@ upvotesTimeline
 
 
 // faq
-
 $.get('https://api.utopian.io/api/faq', (response) => {
   let faq = {};
   for (let i = 0; i < response.results.length; i++) {
@@ -104,60 +105,11 @@ $.get('https://api.utopian.io/api/faq', (response) => {
     faq[response.results[i]['category']].push(response.results[i]);
   }
 
-  renderFaq('general', 'General', faq);
-  renderFaq('earning_rewards', 'Earning Rewards', faq);
-  renderFaq('sharing_contributions', 'Sharing Contributions', faq);
-  renderFaq('managing_projects', 'Managing Projects', faq);
+  helpers.renderFaq('general', 'General', faq);
+  helpers.renderFaq('earning_rewards', 'Earning Rewards', faq);
+  helpers.renderFaq('sharing_contributions', 'Sharing Contributions', faq);
+  helpers.renderFaq('managing_projects', 'Managing Projects', faq);
 });
 
-// helpers
-function randomNumberBetween(min, max) {
-  return min + Math.random() * (max - min);
-}
+// projects/contributions sliders
 
-function renderFaq(categoryId, categoryName, faq) {
-  let template = `
-<div class="card">
-    <div class="card-header">
-        <h5 class="mb-0">
-            <a href="#collapse${categoryId}" class="btn btn-link" data-toggle="collapse">
-                ${categoryName}
-            </a>
-        </h5>
-    </div>
-
-    <div id="collapse${categoryId}" class="collapse" data-parent="#faq-accordion">
-        <div class="card-body">
-          <div id="faq-accordion-${categoryId}"></div>
-        </div>
-    </div>
-</div>
-`;
-
-  faqAccordion.append(template);
-  renderFaqQuestions(categoryId, faq[categoryId]);
-}
-
-function renderFaqQuestions(categoryId, questions) {
-  for (let i = 0; i < questions.length; i++) {
-    let template = `
-<div class="card">
-    <div class="card-header">
-        <h5 class="mb-0">
-            <a href="#collapse${questions[i].hash}" class="btn btn-link" data-toggle="collapse">
-                ${questions[i].title}
-            </a>
-        </h5>
-    </div>
-
-    <div id="collapse${ questions[i].hash }" class="collapse" data-parent="#faq-accordion-${categoryId}">
-        <div class="card-body">
-          ${questions[i].html}
-        </div>
-    </div>
-</div>
-`;
-
-    $('#faq-accordion-' + categoryId).append(template);
-  }
-}
