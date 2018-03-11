@@ -1,0 +1,31 @@
+.hamburger {
+    padding: 0 !important;
+}
+
+@media screen and (min-width: 991px) {
+    .hamburger {
+        display: none !important;
+    }
+}
+
+.hamburger .hamburger-inner,
+.hamburger .hamburger-inner:after,
+.hamburger .hamburger-inner:before {
+    background-color: #fff;
+    border-radius: 0;
+    width: 25px;
+    height: 2px;
+}
+
+.hamburger .hamburger-inner:before {
+    top: -6px
+}
+
+.hamburger .hamburger-inner:after {
+    bottom: -6px;
+}
+
+#navbar .navbar-nav {
+    padding-bottom: 10px;
+    text-align: center;
+}

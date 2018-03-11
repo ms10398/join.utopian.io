@@ -7,18 +7,29 @@ import './smoothscroll'
 import './index.css';
 import './sliders';
 import './sliders.css';
+import './mobile.css';
+import 'hamburgers';
+import 'hamburgers/dist/hamburgers.min.css';
 
 const $ = require('jquery');
 const helpers = require('./helpers');
 
+// enable bootstrap tooltips
 $('[data-toggle="tooltip"]').tooltip();
 
+// enable video modals
 new ModalVideo('.video-button');
 
-const contributionCategories = $('#contribution-categories');
+// change hamburger button state
+const hamburger = $('.hamburger--minus');
+$('#navbarSupportedContent').on('hide.bs.collapse', function () {
+  hamburger.removeClass('is-active');
+}).on('show.bs.collapse', function () {
+  hamburger.addClass('is-active');
+});
 
 // contribution categories
-
+const contributionCategories = $('#contribution-categories');
 let stopLeaveContributionCategory = false,
     hoveringContributionCategory = false;
 $(document).on('mouseenter', '#contribution-categories .circle', function() {

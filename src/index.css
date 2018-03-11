@@ -1,5 +1,6 @@
 * {
     font-family: 'Lato', sans-serif !important;
+    outline: none !important;
 }
 
 body {
@@ -53,8 +54,10 @@ a:active {
 /* navbar */
 
 .navbar {
-    height: 55px;
+    min-height: 55px;
     background: #24292e;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .navbar-brand {
@@ -125,7 +128,7 @@ a:active {
     padding-top: 150px;
 }
 
-#header p {
+#header h2 {
     font-size: 1.9rem;
     line-height: 50px;
 }
