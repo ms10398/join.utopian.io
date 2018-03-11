@@ -1,6 +1,8 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'gsap';
+import ModalVideo from 'modal-video';
+import 'modal-video/css/modal-video.min.css';
 import './smoothscroll'
 import './index.css';
 import './sliders';
@@ -10,6 +12,8 @@ const $ = require('jquery');
 const helpers = require('./helpers');
 
 $('[data-toggle="tooltip"]').tooltip();
+
+new ModalVideo('.video-button');
 
 const contributionCategories = $('#contribution-categories');
 
