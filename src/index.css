@@ -195,14 +195,13 @@ a:active {
 
 #content .card.circles .col div {
     font-size: .75rem;
-    margin-top: 10px;
 }
 
 .circle {
     background: #fff;
     border-radius: 50%;
     border: solid 1px #dfdfdf;
-    display: block;
+    display: inline-block;
     width: 80px;
     height: 80px;
     line-height: 75px;
@@ -280,19 +279,20 @@ a:active {
     background: #fff;
 }
 
-#contribution-categories .text,
-#project-owner-categories .text {
+#contribution-categories .text {
     opacity: 0;
     position: absolute;
+    top: 0;
 }
 
-#contribution-categories .text-main,
-#project-owner-categories .text-main {
+#contribution-categories .text-main {
     opacity: 1;
+    position: static;
 }
 
-#project-owner-categories {
-    min-height: 500px;
+#project-owner-categories,
+#project-owner-categories .circles {
+    min-height: 400px;
 }
 
 #project-owner-categories .circle {
@@ -330,8 +330,8 @@ a:active {
 .octocat-text {
     background: #fff;
     border: solid 1px #e0e2e5;
-    font-size: .8rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.7rem;
     position: relative;
 }
 
@@ -366,7 +366,7 @@ a:active {
 }
 
 .octocat-text h5 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
@@ -409,6 +409,7 @@ a:active {
 #steem-logo-container {
     position: relative;
     display: inline-block;
+    margin: 50px 0;
 }
 
 #steem-logo-container:after {
@@ -426,7 +427,7 @@ a:active {
 
 #steem-logo-container #steem-logo {
     width: 250px;
-    max-width: 250px;
+    max-width: 100%;
     position: relative;
 }
 
