@@ -297,6 +297,29 @@ a:active {
     box-shadow: 0 0 25px rgba(0, 0, 0, .2);
 }
 
+.tooltip {
+    margin-top: 55px;
+    margin-left: -15px;
+}
+
+.tooltip .tooltip-inner {
+    border-radius: 0 15px 15px 15px;
+    text-transform: uppercase;
+    font-size: .8rem;
+    padding: .5rem .75rem;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.bs-tooltip-right .arrow::before {
+    content: "";
+    border-width: 5px;
+    border-bottom-color: #000;
+    border-left-color: #000;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    left: 6px;
+    top: -10px;
+}
+
 .two-columns {
     column-count: 2;
 }

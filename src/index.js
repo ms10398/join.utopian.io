@@ -9,8 +9,9 @@ import './sliders.css';
 const $ = require('jquery');
 const helpers = require('./helpers');
 
+$('[data-toggle="tooltip"]').tooltip();
+
 const contributionCategories = $('#contribution-categories');
-const projectOwnerCategories = $('#project-owner-categories');
 
 // contribution categories
 
@@ -39,37 +40,6 @@ $(document).on('mouseleave', '#contribution-categories .circle', function() {
     TweenMax.to(contributionCategories.find('.text'), .2, {opacity: 0, onComplete: () => {
       TweenMax.to(contributionCategories.find('.text-main'), .2, {opacity: 1, onComplete: () => {
         stopLeaveContributionCategory = false;
-      }});
-    }});
-  }
-});
-
-// project owner categories
-let stopLeaveProjectOwnerCategory = false,
-    hoveringProjectOwnerCategory = false;
-$(document).on('mouseenter', '#project-owner-categories .circle', function() {
-  stopLeaveProjectOwnerCategory = true;
-  hoveringProjectOwnerCategory = true;
-  TweenMax.to(projectOwnerCategories.find('.text'), .2, {opacity: 0, onComplete: () => {
-    TweenMax.to(projectOwnerCategories.find('.text-' + $(this).data('toggle')), .2, {opacity: 1, onComplete: () => {
-      stopLeaveProjectOwnerCategory = false;
-      if (!hoveringProjectOwnerCategory) {
-        TweenMax.to(projectOwnerCategories.find('.text'), .2, {opacity: 0, onComplete: () => {
-          TweenMax.to(projectOwnerCategories.find('.text-main'), .2, {opacity: 1, onComplete: () => {
-            stopLeaveProjectOwnerCategory = false;
-          }});
-        }});
-      }
-    }});
-  }});
-});
-
-$(document).on('mouseleave', '#project-owner-categories .circle', function() {
-  hoveringProjectOwnerCategory = false;
-  if (!stopLeaveProjectOwnerCategory) {
-    TweenMax.to(projectOwnerCategories.find('.text'), .2, {opacity: 0, onComplete: () => {
-      TweenMax.to(projectOwnerCategories.find('.text-main'), .2, {opacity: 1, onComplete: () => {
-        stopLeaveProjectOwnerCategory = false;
       }});
     }});
   }
