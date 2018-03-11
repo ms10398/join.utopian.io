@@ -52,12 +52,9 @@ a:active {
 
 /* navbar */
 
-#navbar {
-    background: #24292e;
-}
-
 .navbar {
     height: 55px;
+    background: #24292e;
 }
 
 .navbar-brand {

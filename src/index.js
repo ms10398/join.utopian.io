@@ -1,6 +1,7 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'gsap';
+import './smoothscroll'
 import './index.css';
 import './sliders';
 import './sliders.css';
