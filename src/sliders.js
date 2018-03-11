@@ -46,7 +46,6 @@ contributionsContainer.slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   infinite: true,
-  focusOnSelect: true,
   dots: true,
   responsive: [
     {
