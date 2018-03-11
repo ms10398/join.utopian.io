@@ -86,5 +86,9 @@ $.get('https://api.utopian.io/api/faq', (response) => {
   helpers.renderFaq('managing_projects', 'Managing Projects', faq);
 });
 
-// projects/contributions sliders
-
+// remove cover
+$(() => {
+  $('#cover').fadeOut(function () {
+    $(this).remove();
+  });
+});
