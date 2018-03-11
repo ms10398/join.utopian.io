@@ -160,6 +160,13 @@
     color: #fff;
 }
 
+#projects #contributions-container .slick-list .contribution .contribution-inner .category svg {
+    width: 16px;
+    fill: #fff;
+    vertical-align: middle;
+    margin-top: -1px;
+}
+
 #projects #contributions-container .slick-list .contribution .contribution-inner .category.ideas, #projects #contributions-container .slick-list .contribution .contribution-inner .category.task-ideas {
     background: #54d2a0;
 }
@@ -193,9 +200,7 @@
 }
 
 #projects #contributions-container .slick-list .contribution .contribution-inner .category.documentation, #projects #contributions-container .slick-list .contribution .contribution-inner .category.task-documentation {
-    color: #000;
-    background: #fff;
-    border-bottom: solid 1px #eee;
+    background: #a0a0a0;
 }
 
 #projects #contributions-container .slick-list .contribution .contribution-inner .category.tutorials, #projects #contributions-container .slick-list .contribution .contribution-inner .category.task-tutorials {
