@@ -171,8 +171,8 @@
     background: #54d2a0;
 }
 
-#projects #contributions-container .slick-list .contribution .contribution-inner .category.sub-projects, #projects #contributions-container .slick-list .contribution .contribution-inner .category.task-sub-projects {
-    background: #a0db8e;
+#projects #contributions-container .slick-list .contribution .contribution-inner .category.blog, #projects #contributions-container .slick-list .contribution .contribution-inner .category.task-blog {
+    background: #0275d8;
 }
 
 #projects #contributions-container .slick-list .contribution .contribution-inner .category.development, #projects #contributions-container .slick-list .contribution .contribution-inner .category.task-development {

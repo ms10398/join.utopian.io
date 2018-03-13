@@ -230,7 +230,6 @@ a:active {
 }
 
 .circle.suggestions svg { fill: #4dd39f; }
-.circle.sub-projects svg { fill: #9fdb8e; }
 .circle.development svg { fill: #000; }
 .circle.bug-hunting svg { fill: #db524c; }
 .circle.translation svg { fill: #ffcf26; }
@@ -241,9 +240,9 @@ a:active {
 .circle.tutorials svg { fill: #792a51; }
 .circle.video-tutorials svg { fill: #ec3424; }
 .circle.copywriting svg { fill: #007f80; }
+.circle.blog svg { fill: #0275d8; }
 
 .circle.suggestions:hover { background: #4dd39f; }
-.circle.sub-projects:hover { background: #9fdb8e; }
 .circle.development:hover { background: #000; }
 .circle.bug-hunting:hover { background: #db524c; }
 .circle.translation:hover { background: #ffcf26; }
@@ -254,6 +253,7 @@ a:active {
 .circle.tutorials:hover { background: #792a51; }
 .circle.video-tutorials:hover { background: #ec3424; }
 .circle.copywriting:hover { background: #007f80; }
+.circle.blog:hover { background: #0275d8; }
 
 .circle:hover svg,
 .circle.reverse svg {
@@ -261,7 +261,6 @@ a:active {
 }
 
 .circle.reverse.suggestions { background: #4dd39f; }
-.circle.reverse.sub-projects { background: #9fdb8e; }
 .circle.reverse.development { background: #000; }
 .circle.reverse.bug-hunting { background: #db524c; }
 .circle.reverse.translation { background: #ffcf26; }
@@ -272,9 +271,9 @@ a:active {
 .circle.reverse.tutorials { background: #792a51; }
 .circle.reverse.video-tutorials { background: #ec3424; }
 .circle.reverse.copywriting { background: #007f80; }
+.circle.reverse.blog { background: #0275d8; }
 
 .circle.reverse.suggestions:hover svg { fill: #4dd39f; }
-.circle.reverse.sub-projects:hover svg { fill: #9fdb8e; }
 .circle.reverse.development:hover svg { fill: #000; }
 .circle.reverse.bug-hunting:hover svg { fill: #db524c; }
 .circle.reverse.translation:hover svg { fill: #ffcf26; }
@@ -285,6 +284,7 @@ a:active {
 .circle.reverse.tutorials:hover svg { fill: #792a51; }
 .circle.reverse.video-tutorials:hover svg { fill: #ec3424; }
 .circle.reverse.copywriting:hover svg { fill: #007f80; }
+.circle.reverse.blog:hover svg { fill: #0275d8; }
 
 .circle.reverse:hover {
     background: #fff;
