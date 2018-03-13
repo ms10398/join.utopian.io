@@ -7,6 +7,7 @@ const $ = require('jquery');
 const projectsContainer = $('#projects-container');
 const contributionsContainer = $('#contributions-container');
 const blockingOverlay = $('#projects-container-overlay');
+const spinner = $('#contributions-spinner');
 
 projectsContainer.slick({
   slidesToShow: 5,
@@ -32,6 +33,7 @@ projectsContainer.slick({
 }).on('beforeChange', (e, slick, currentSlide, nextSlide) => {
   if (currentSlide !== nextSlide) {
     blockingOverlay.css('display', 'block');
+    spinner.css('display', 'block');
 
     TweenMax.to(contributionsContainer, .3, {opacity: 0, onComplete: async () => {
       let gitHubId = $(slick.$slides[nextSlide]).data('githubid');
@@ -42,6 +44,7 @@ projectsContainer.slick({
       }
       TweenMax.to(contributionsContainer, .3, {opacity: 1, onComplete: () => {
         blockingOverlay.css('display', 'none');
+        spinner.css('display', 'none');
       }});
     }});
   }

@@ -167,4 +167,8 @@
         margin-bottom: 10px !important;
         display: block;
     }
+
+    #projects #contributions-container .slick-list .contribution .contribution-inner .stats {
+        font-size: .7rem;
+    }
 }
