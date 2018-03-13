@@ -425,6 +425,7 @@ a:active {
     text-align: left;
     padding-left: 0;
     font-size: 1.1rem;
+    white-space: normal;
 }
 
 #faq-accordion .card-body {
