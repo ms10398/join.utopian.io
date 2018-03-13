@@ -158,3 +158,13 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 350px) {
+    #header div .btn-lg:first-child,
+    #header div .btn-lg:last-child {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 10px !important;
+        display: block;
+    }
+}
