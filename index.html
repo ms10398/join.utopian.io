@@ -49,34 +49,11 @@
         }
     </style>
 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
 
     <link rel="icon" type="image/png" href="img/favicon.png" />
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-    <script>
-      window.addEventListener("load", function(){
-        window.cookieconsent.initialise({
-          "palette": {
-            "popup": {
-              "background": "#4786ff",
-              "text": "#ffffff"
-            },
-            "button": {
-              "background": "transparent",
-              "text": "#fff",
-              "border": "#fff"
-            }
-          },
-          "content": {
-            "href": "https://utopian.io/cookies"
-          }
-        })});
-    </script>
 </head>
 <body>
 
@@ -670,6 +647,27 @@
     </div>
 </div>
 
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#4786ff",
+          "text": "#ffffff"
+        },
+        "button": {
+          "background": "transparent",
+          "text": "#fff",
+          "border": "#fff"
+        }
+      },
+      "content": {
+        "href": "https://utopian.io/cookies"
+      }
+    })});
+</script>
 <script src="dist/bundle.js"></script>
 </body>
 </html>
