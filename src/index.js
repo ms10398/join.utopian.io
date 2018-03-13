@@ -60,6 +60,11 @@ $(document).on('mouseleave', '#contribution-categories .circle', function() {
   }
 });
 
+
+$(document).on('click', '.circle', function(e) {
+  e.preventDefault();
+});
+
 // generate upvotes on steem logo...
 for (let i = 0; i < 6; i++) {
   let bubble = document.createElement('span');
