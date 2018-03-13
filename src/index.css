@@ -29,6 +29,7 @@ body {
 .btn:not(:disabled):not(.disabled).active:focus,
 .btn:not(:disabled):not(.disabled):active:focus {
     box-shadow: none;
+    color: #fff;
 }
 
 .btn-lg {
