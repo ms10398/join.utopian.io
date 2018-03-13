@@ -6,6 +6,7 @@ const $ = require('jquery');
 
 const projectsContainer = $('#projects-container');
 const contributionsContainer = $('#contributions-container');
+const blockingOverlay = $('#projects-container-overlay');
 
 projectsContainer.slick({
   slidesToShow: 5,
@@ -28,17 +29,20 @@ projectsContainer.slick({
       }
     }
   ]
-}).on('beforeChange', async (e, slick, currentSlide, nextSlide) => {
+}).on('beforeChange', (e, slick, currentSlide, nextSlide) => {
   if (currentSlide !== nextSlide) {
-    let gitHubId = $(slick.$slides[nextSlide]).data('githubid');
-    let contributions = await helpers.getContributionsByGitHubId(gitHubId);
+    blockingOverlay.css('display', 'block');
 
-    TweenMax.to(contributionsContainer, .3, {opacity: 0, onComplete: () => {
+    TweenMax.to(contributionsContainer, .3, {opacity: 0, onComplete: async () => {
+      let gitHubId = $(slick.$slides[nextSlide]).data('githubid');
+      let contributions = await helpers.getContributionsByGitHubId(gitHubId);
       contributionsContainer.slick('slickRemove', null, null, true);
       for (let i = 0; i < contributions.length; i++) {
         contributionsContainer.slick('slickAdd', helpers.getContributionHtml(contributions[i]));
       }
-      TweenMax.to(contributionsContainer, .3, {opacity: 1});
+      TweenMax.to(contributionsContainer, .3, {opacity: 1, onComplete: () => {
+        blockingOverlay.css('display', 'none');
+      }});
     }});
   }
 });

@@ -85,7 +85,7 @@
 
 #projects #projects-container .slick-arrow:before {
     color: #888;
-    opacity: 0;
+    opacity: .1;
     font-size: 2.5rem;
     transition: opacity 0.3s ease;
     position: absolute;
@@ -120,6 +120,15 @@
 
 #projects #projects-container:hover .slick-arrow:before {
     opacity: 0.3;
+}
+
+#projects #projects-container-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: none;
+    z-index: 999;
 }
 
 #projects #contributions-loader {
