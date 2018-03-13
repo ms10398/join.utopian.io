@@ -120,6 +120,24 @@
         line-height: 30px;
     }
 
+    #header div .btn-lg:first-child {
+        margin-right: .5rem !important;
+    }
+
+    #header div .btn-lg:last-child {
+        margin-left: .5rem !important;
+    }
+
+    #content h2,
+    #content h3 {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
+    #content .blue-icon {
+        margin: 0 auto;
+    }
+
     .tooltip {
         display: none;
     }
