@@ -1,5 +1,9 @@
 # Utopian.io Landingpage
 
-Live: [join.utopian.io](http://join.utopian.io)
-
-Dev: [utopian-io.github.io/utopian-io-landingpage](https://utopian-io.github.io/utopian-io-landingpage)
+```
+git clone https://github.com/utopian-io/join.utopian.io.git
+cd join.utopian.io
+git checkout new-design
+npm i
+npm run build
+```
