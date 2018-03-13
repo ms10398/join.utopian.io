@@ -191,6 +191,19 @@ a:active {
     display: block;
 }
 
+#content .video-button svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-top: -2px;
+    fill: #343a40;
+    transition: fill .3s ease;
+}
+
+#content .video-button:hover svg {
+    fill: #fff;
+}
+
 #content .card {
     border: none;
     box-shadow: 0 0 35px rgba(0, 0, 0, .05);
