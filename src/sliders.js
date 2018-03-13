@@ -13,6 +13,7 @@ projectsContainer.slick({
   centerMode: true,
   infinite: true,
   focusOnSelect: true,
+  accessibility: false,
   responsive: [
     {
       breakpoint: 1200,
@@ -47,6 +48,7 @@ contributionsContainer.slick({
   slidesToScroll: 1,
   infinite: true,
   dots: true,
+  accessibility: false,
   responsive: [
     {
       breakpoint: 1200,
