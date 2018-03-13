@@ -135,7 +135,6 @@
 #projects #contributions-container {
     position: relative;
     z-index: 50;
-    min-height: 250px;
 }
 
 #projects #contributions-container .slick-list {

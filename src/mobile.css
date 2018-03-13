@@ -138,6 +138,22 @@
         margin: 0 auto;
     }
 
+    #projects #projects-container .slick-list {
+        padding: 25px 50px !important;
+    }
+
+    #projects #contributions-container .slick-dots {
+        top: -15px;
+    }
+
+    #projects #contributions-container .slick-dots li {
+        width: 15px;
+    }
+
+    #projects #contributions-container .slick-list {
+        padding: 25px 50px 0 !important;
+    }
+
     .tooltip {
         display: none;
     }
