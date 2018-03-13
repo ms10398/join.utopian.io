@@ -173,7 +173,7 @@ helpers.getContributionHtml = (contribution) => {
       <img class="profile-image" src="https://img.busy.org/@${contribution.author}?s=30"/>
       <a class="username" href="https://utopian.io/@${contribution.author}">${contribution.author}</a>
       <span class="reputation">${helpers.calculateReputation(contribution.author_reputation)}</span>
-      <span class="date">${moment.utc(contribution.created).from(moment.utc().format('YYYY-MM-DD HH:mm:ss'))}</span>
+      <!--<span class="date">${moment.utc(contribution.created).from(moment.utc().format('YYYY-MM-DD HH:mm:ss'))}</span>-->
   </div>
   <div class="title">
       <a href="https://utopian.io${contribution.url}">${contribution.title}</a>
