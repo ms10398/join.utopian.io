@@ -1,6 +1,7 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'gsap';
+import Cookies from 'js-cookie';
 import ModalVideo from 'modal-video';
 import 'modal-video/css/modal-video.min.css';
 import './smoothscroll'
@@ -108,3 +109,5 @@ $(() => {
     $(this).remove();
   });
 });
+
+Cookies.set('lp_visited', true);
