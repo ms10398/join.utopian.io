@@ -91,4 +91,4 @@ $(() => {
   });
 });
 
-Cookies.set('lp_visited', true);
+Cookies.set('lp_visited', true, {domain: window.location.host.replace('join.', '')});
