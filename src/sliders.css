@@ -230,6 +230,11 @@
     border-radius: 50%;
     margin-right: 5px;
     float: left;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-size: cover;
+    background-position: center center;
 }
 
 #projects #contributions-container .slick-list .contribution .contribution-inner .user .username {
