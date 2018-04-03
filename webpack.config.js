@@ -1,10 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+    owners: './src/owners/index.js',
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name]-bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -36,11 +40,21 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      chunks: ['main'],
       template: 'src/index.html',
-      filename: '../index.html',
+      filename: '../dist/index.html',
       minify: {
         collapseWhitespace: true
       }
-    })
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['owners'],
+      template: 'src/owners/index.html',
+      filename: '../dist/owners/index.html',
+      minify: {
+        collapseWhitespace: true
+      }
+    }),
+    new CopyWebpackPlugin([{from: 'src/img', to: 'img'}])
   ]
 };

@@ -127,7 +127,7 @@ a:active {
 #header {
     height: 598px;
     background-size: cover;
-    background-image: url('../img/header.jpg');
+    background-image: url('/img/header.jpg');
     background-position: center center;
 }
 

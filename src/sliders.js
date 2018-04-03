@@ -1,6 +1,8 @@
 import 'gsap';
 import 'slick-carousel';
 
+const projects = require('./projects');
+
 const helpers = require('./helpers');
 const $ = require('jquery');
 
@@ -74,7 +76,6 @@ contributionsContainer.slick({
 
 
 (async function() {
-  let projects = await helpers.getProjects();
   let contributions = await helpers.getContributionsByGitHubId(projects[0].github.id);
 
   // add projects

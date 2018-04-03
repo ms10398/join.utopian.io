@@ -54,14 +54,6 @@ helpers.renderFaqQuestions = (categoryId, questions) => {
   }
 };
 
-helpers.getProjects = () => {
-  return new Promise(function(resolve, reject) {
-    $.get('projects.json', (projects) => {
-      resolve(projects);
-    });
-  })
-};
-
 helpers.getContributionsByGitHubId = (gitHubId) => {
   return new Promise((resolve, reject) => {
       $.get('https://api.utopian.io/api/posts/?limit=10&section=project&sortBy=votes&platform=github&projectId=' + gitHubId, (contributions) => {

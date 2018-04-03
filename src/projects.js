@@ -1,4 +1,4 @@
-[
+module.exports = [
   {
     "name": "Steemit.com",
     "teaser": "The social application web front-end to the Steem Blockchain",
@@ -59,4 +59,4 @@
       "url": "https://github.com/eSteemApp/esteem"
     }
   }
-]
+];

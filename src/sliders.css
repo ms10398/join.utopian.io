@@ -97,7 +97,7 @@
 }
 
 #projects #projects-container .slick-arrow.slick-prev {
-    background: url('../img/gradient-left.png') repeat-y;
+    background: url('/img/gradient-left.png') repeat-y;
     background-size: 100%;
     left: 0;
 }
@@ -108,7 +108,7 @@
 }
 
 #projects #projects-container .slick-arrow.slick-next {
-    background: url('../img/gradient-right.png') repeat-y;
+    background: url('/img/gradient-right.png') repeat-y;
     background-size: 100%;
     right: 0;
 }
