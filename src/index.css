@@ -494,3 +494,12 @@ a:active {
 #footer .social-icons a:hover {
     color: #fff;
 }
+
+#footer #promo a img {
+    opacity: .8;
+    transition: opacity .3s ease;
+}
+
+#footer #promo a:hover img {
+    opacity: 1
+}
