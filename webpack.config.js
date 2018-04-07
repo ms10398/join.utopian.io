@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     main: './src/index.js',
     owners: './src/owners/index.js',
+    investors: './src/investors/index.js',
   },
   output: {
     filename: '[name]-bundle.js',
@@ -51,6 +52,14 @@ module.exports = {
       chunks: ['owners'],
       template: 'src/owners/index.html',
       filename: '../dist/owners/index.html',
+      minify: {
+        collapseWhitespace: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['investors'],
+      template: 'src/investors/index.html',
+      filename: '../dist/investors/index.html',
       minify: {
         collapseWhitespace: true
       }
