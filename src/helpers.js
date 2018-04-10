@@ -56,9 +56,19 @@ helpers.renderFaqQuestions = (categoryId, questions) => {
 
 helpers.getContributionsByGitHubId = (gitHubId) => {
   return new Promise((resolve, reject) => {
-      $.get('https://api.utopian.io/api/posts/?limit=10&section=project&sortBy=votes&platform=github&projectId=' + gitHubId, (contributions) => {
+    $.ajax({
+      type: 'GET',
+      beforeSend: function(request) {
+        request.setRequestHeader("x-api-key", 'c5pEsMpYZY896r7USzhWdapIY7o1GEpj3QCEQZSN');
+        request.setRequestHeader("x-api-key-id", 'kvo2x1982b');
+        request.setRequestHeader("Content-Type", 'application/json');
+        request.setRequestHeader("Accept", 'application/json');
+      },
+      url: 'https://api.utopian.io/api/posts/?limit=10&section=project&sortBy=votes&platform=github&projectId=' + gitHubId,
+      success: function(contributions) {
         resolve(contributions.results);
-      });
+      }
+    });
   });
 };
 
