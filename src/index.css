@@ -503,3 +503,9 @@ a:active {
 #footer #promo a:hover img {
     opacity: 1
 }
+
+#footer .disclaimer {
+    color: #7583a5 !important;
+    font-size: 12px;
+    opacity: 0.5;
+}
