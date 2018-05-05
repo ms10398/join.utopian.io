@@ -125,7 +125,8 @@ a:active {
 /* header */
 
 #header {
-    height: 598px;
+    /*height: 598px;*/
+    height: 500px;
     background-size: cover;
     background-image: url('/img/header.jpg');
     background-position: center center;
