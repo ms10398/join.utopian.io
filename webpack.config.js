@@ -9,6 +9,8 @@ module.exports = {
         investors: './src/investors/index.js',
         rules: './src/rules/index.js',
         cookies: './src/cookies/index.js',
+        privacy: './src/privacy/index.js',
+        tos: './src/tos/index.js',
     },
     output: {
         filename: '[name]-bundle.js',
@@ -78,6 +80,22 @@ module.exports = {
             chunks: ['rules'],
             template: 'src/cookies/index.html',
             filename: '../dist/cookies/index.html',
+            minify: {
+                collapseWhitespace: true
+            }
+        }),
+        new HtmlWebpackPlugin({
+            chunks: ['privacy'],
+            template: 'src/privacy/index.html',
+            filename: '../dist/privacy/index.html',
+            minify: {
+                collapseWhitespace: true
+            }
+        }),
+        new HtmlWebpackPlugin({
+            chunks: ['tos'],
+            template: 'src/tos/index.html',
+            filename: '../dist/tos/index.html',
             minify: {
                 collapseWhitespace: true
             }
