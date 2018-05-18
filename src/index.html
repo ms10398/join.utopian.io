@@ -116,7 +116,7 @@
                     <!--<a class="nav-link" href="#scRedirectModal" data-toggle="modal">Login</a>-->
                     <!--</li>-->
                     <li class="nav-item">
-                        <a class="nav-link video-button" href="#" data-video-id="8S1AtrzYY1Q">Login</a>
+                        <a class="nav-link" href="#loginInfoModal" data-toggle="modal">Login</a>
                     </li>
                 </ul>
             </div>
@@ -129,7 +129,7 @@
     <h2 class="mt-4 mb-5">Earn rewards by contributing to your<br />favorite Open Source projects!</h2>
     <div>
         <a href="#steemSignupModal" data-toggle="modal" class="btn btn-primary btn-lg mr-4">Sign Up</a>
-        <a class="btn btn-secondary btn-lg mr-4 video-button" data-video-id="8S1AtrzYY1Q">
+        <a href="#loginInfoModal" data-toggle="modal" class="btn btn-secondary btn-lg mr-4">
             Log In
         </a>
     </div>
@@ -669,6 +669,50 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <a href="https://v2.steemconnect.com/oauth2/authorize?client_id=utopian.app&response_type=code&redirect_uri=https%3A%2F%2Futopian.io%2Fcallback&scope=vote,comment,delete_comment,comment_options,custom_json,claim_reward_balance,offline" class="btn btn-primary">Login with SteemConnect</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="loginInfoModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Choose a platform!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    To submit your work, you can use any one of the following Steem-based platforms. Just login and start sharing your contributions or task requests.
+                </p>
+                <div class="text-center my-4">
+                    <button type="button" class="btn btn-outline-dark video-button" data-video-id="8S1AtrzYY1Q">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z" />
+                        </svg>
+                        Watch the video to learn more!
+                    </button>
+                </div>
+                <hr class="mb-4">
+                <div class="row text-center mb-3">
+                    <div class="col-12 col-lg-4 mb-5 mb-lg-0">
+                        <img src="img/steemit-logo.png" alt="Steemit logo" class="mb-4" />
+                        <p class="text-left">Steemit.com is the first social media platform built on the Steem blockchain. It's developed and maintained by Steemit Inc.</p>
+                        <a href="https://steemit.com" class="btn btn-outline-dark">Login on steemit.com</a>
+                    </div>
+                    <div class="col-12 col-lg-4 mb-5 mb-lg-0">
+                        <img src="img/busy-logo.png" alt="Busy logo" class="mb-4" />
+                        <p class="text-left">Busy.org (which also cooperates with Steemit Inc.) is the driving force behind a unique and robust social media experience.</p>
+                        <a href="https://busy.org" class="btn btn-outline-dark">Login on busy.org</a>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <img src="img/esteem-logo.png" alt="eSteem logo" class="mb-4" />
+                        <p class="text-left">The eSteem app is the first native mobile app for the Steem blockchain, available for Android and iOS.</p>
+                        <a href="https://esteem.ws" class="btn btn-outline-dark">Download the app</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

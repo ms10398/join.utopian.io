@@ -192,7 +192,7 @@ a:active {
     display: block;
 }
 
-#content .video-button svg {
+.video-button svg {
     width: 20px;
     height: 20px;
     vertical-align: middle;
@@ -201,7 +201,7 @@ a:active {
     transition: fill .3s ease;
 }
 
-#content .video-button:hover svg {
+.video-button:hover svg {
     fill: #fff;
 }
 
