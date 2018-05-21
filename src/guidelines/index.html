@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Earn rewards by contributing to your favorite Open Source projects! Utopian is the only platform rewarding contributions to Open Source projects by utilizing a decentralised, vote-based reward system built on top of the STEEM Blockchain.">
+  <meta name="author" content="Utopian Company S.r.l.s.">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+
+  <title>Utopian.io - Open Source Economy</title>
+
+  <style>
+    body {
+      margin: 0;
+    }
+
+    #cover {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #24292e;
+      z-index: 9999;
+      text-align: center;
+    }
+
+    .spinner {
+      animation-name: spin;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      width: 24px;
+      height: 24px;
+      margin: 15px;
+    }
+
+    @-moz-keyframes spin {
+      from {
+        -moz-transform: rotate(0deg);
+      }
+      to {
+        -moz-transform: rotate(360deg);
+      }
+    }
+
+    @-webkit-keyframes spin {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+
+  <link rel="icon" type="image/png" href="../img/favicon.png" />
+  <!-- Facebook Pixel Code -->
+  <script>
+    ! function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '155330168420592');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img name="pixel" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=155330168420592&ev=PageView&noscript=1"/></noscript>
+  <!-- End Facebook Pixel Code -->
+
+</head>
+
+<body>
+
+  <div id="cover">
+    <svg class="spinner" viewBox="0 0 24 24">
+        <path fill="#fff" d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" />
+    </svg>
+  </div>
+
+  <a id="top"></a>
+  <div id="navbar">
+    <div class="container">
+      <nav class="navbar fixed-top navbar-dark navbar-expand-lg">
+        <a class="navbar-brand smoothscroll" href="/">
+                <img src="../img/logo.png" class="d-inline-block mr-1 mb-1" alt="Logo">
+                Utopian
+            </a>
+        <button class="hamburger hamburger--minus js-hamburger hidden-sm" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">About Utopian</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smoothscroll" href="/owners">Project Owners</a>
+            </li>
+            <!--<li class="nav-item">-->
+            <!--<a class="nav-link" href="#steemSignupModal" data-toggle="modal">Sign Up</a>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+            <!--<a class="nav-link" href="#scRedirectModal" data-toggle="modal">Login</a>-->
+            <!--</li>-->
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="container py-3 py-sm-5">
+      <div>
+        <br/>
+        <h1>How to contribute</h1> Use your favourite STEEM frontend <a href="https://steemit.com" target="_blank">Steemit.com</a> or <a href="https://busy.org" target="_blank">Busy.org</a> and publish your contributions or task requests by following our Guidelines.
+
+        <ul>
+          <li>Set the first tag of your post: <b>utopian-io</b></li>
+          <li>Set the second tag of your post based on the category. Each <b>category tag</b> can be found below in the category specific guidelines.</li>
+          <li>In the body of your post always include the <b>link to the github repository at the top</b>, i.e. https://github.com/utopian-io/utopian.io</li>
+          <li>Follow any of the <b>predefined templates</b> to make sure your contribution has a clear format. Each <b>category template</b> can be found below in the category specific guidelines.</li>
+          <li>Once your contribution or task request has been submitted wait up to <b>72 hours</b> for a Moderator to review it.</li>
+          <li>If your contribution is eligible for an upvote, the main @utopian-io account will <b>vote and comment on your post</b>.</li>
+        </ul>
+
+        <button type="button" class="btn btn-outline-dark video-button" data-video-id="8S1AtrzYY1Q">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z" />
+                </svg>
+                Watch Video
+            </button>
+
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" style="color:black !important; padding-left: 35px !important; padding-right: 35px !important;" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">General</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" style="color:black !important;padding-left: 35px !important; padding-right: 35px !important;" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Contributions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" style="color:black !important;padding-left: 35px !important; padding-right: 35px !important;" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Task Requests</a>
+      </li>
+    </ul>
+    <div class="tab-content mt-3" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <h3>Policies vs Guidelines</h3>
+        <p>
+          <b>Policies-</b>Mandatory rules for use of Utopian services and participation in the community. <b>Failing to adhere to one or more of the policies will lead to the immediate rejection of your submission, and may lead to a downvote and / or ban from Utopian services.</b>          <br> <br>
+          <b>Guidelines-</b> General guidelines for submission of contributions to Utopian. Failing to adhere to guidelines may lead to a lower score of your submission, thus lowering its chances of receiving a reward.
+        </p>
+        <h3>Bans and Downvotes Policy</h3>
+        <p>The following may lead to a temporary or permanent ban from Utopian:</p>
+        <ul>
+          <li>Failing to adhere to Utopian Policies.</li>
+          <li>Harassing any member of the Utopian team.</li>
+          <li>Using multiple accounts to abuse the system.</li>
+          <li>Plagiarism.</li>
+          <li>Spamming (including tag spamming).</li>
+        </ul>
+        <h3>Vote and Approval Retraction Policy</h3>
+        <ul>
+          <li>Submissions by users found in violation of Utopian policies can be unvoted even after they have been reviewed and scored.</li>
+          <li>Erroneous (accidental) Utopian upvotes may be retracted.</li>
+        </ul>
+        <h3>Forbidden Content Policy</h3>
+        <br>
+        <h4>Commercial / Copyrighted Materials</h4>
+        <ul>
+          <li>Images and videos used must be distributed under the Creative Commons license and content source must be cited (when applicable).</li>
+          <li>Inclusion of licensed or commercial materials may lead to a downvote and/or temporary or permanent ban from Utopian services.</li>
+        </ul>
+        <h4>Spam & Solicitation</h4>
+        <ul>
+          <li>Contributions submitted for monetary gain alone, or ones that appear as obvious attempts to monetize redundant efforts via Utopian, will not be eligible for reward. Continuous submission of such contributions may lead to a downvote and/or temporary
+            or permanent ban from Utopian services.</li>
+          <li>Tag spamming or any kind of spam content will not be reviewed, and may lead to a downvote and/or temporary or permanent ban from Utopian services.</li>
+          <li>Submissions that solicit any activity that is not allowed according to Utopian Policies will not be eligible for reward.</li>
+        </ul>
+        <h4>Defamation</h4>
+        <ul>
+          <li>Contribution content and submission posts to Utopian must not include any kind of derogatory or offensive speech directed at persons, groups, beliefs or political views. </li>
+          <li>Contribution content, submission posts to Utopian and comments must not contain false information about another user that may be perceived as defamatory.</li>
+        </ul>
+        <h3>Github Integration Policy</h3>
+        <p><b>To be considered for reward Utopian contributors must have an active GitHub account associated with their Utopian / Steem account (unless otherwise specified).</b></p>
+        <ul>
+          <li>Disrespectful communication with Project Owners on GitHub, mention of Utopian on GitHub services, or any unsolicited representation of Utopian on external platforms that may be harmful to the Utopian brand will result in an immediate and permanent
+            ban from all Utopian services.</li>
+          <li>All contributions submitted must be linked to an open source project with a GitHub repository.</li>
+          <li>The Github repository linked to the submission post <b>must contain the project’s source code, a readme file with usage and install instructions and an appropriate open source license,</b> or be directly connected to such a repository.</li>
+          <li>Contributions to un-official repositories will only be eligible for potential reward if the repository is listed in <a href="https://docs.google.com/spreadsheets/d/1RMQyfqKRmgeIWPM80h31hS1NdLxqLJ6qy3I5ucNGuuc/edit?usp=sharing">Utopian un-official repos whitelist.</a></li>
+          <li>Contributions to repositories listed on <a href="https://docs.google.com/spreadsheets/d/1q49j3mjjJVwqxRUdX0sqEApV7mAVil-K-OS-lKlFP_Y/edit?usp=sharing">Utopian repos blacklist</a> will not be eligible for potential reward.</li>
+          <li>Contributions to official repositories that are mirrors of another subversioning system are eligible for potential reward.</li>
+          <li>Contributions to repositories that have not received any program code updates for longer than 6 months, will not be eligible for potential reward.</li>
+          <li>Contributions to forks that do not have any difference / improvement over the original project will not eligible for potential reward.</li>
+          <li>Contributions to own projects that do not accept contributions from other users will not be eligible for potential reward.</li>
+        </ul>
+        <h3>Post Submission Guidelines</h3>
+        <br>
+        <h4>Submission Content & Format</h4>
+        <ul>
+          <li>Inclusion of any or all of the following may lead to a lower score of your submission:
+            <ul>
+              <li>Links to commercial products and affiliate links</li>
+              <li>Requests for Steem / Steemit engagement (upvotes, resteems and follows)</li>
+              <li>Tagging or mentioning other Steem / Utopian users without valid reason</li>
+              <li>Including links to social profiles in a disruptive way</li>
+              <li>Asking for Steem witness votes in a disruptive way</li>
+            </ul>
+          </li>
+          <li>To ensure contributions to Utopian are easy to read and understand, they should be written in a formal and professional style. Unprofessional, unclear, difficult to comprehend due to grammatical errors, or informally written submissions will
+            receive a lower score or <b>may not be reviewed at all.</b> Please refer to the following resource when writing contribution submissions - <a href="https://owl.english.purdue.edu/owl/resource/656/02/">https://owl.english.purdue.edu/owl/resource/656/02/</a></li>
+          <li>Only submissions in <b>easily understood English</b> will be reviewed and scored. Contributions in other languages must include a full and comprehensible translation of all content included in the submission.</li>
+          <li>To increase reliability and allow for efficient reviewing, please use the submission templates provided for each category. Feel free to edit and expand upon the templates as long as the formatting is clear and all the information necessary for
+            review is included.</li>
+          <li>Images and videos used in contribution submissions should be of high resolution. Low resolution images and videos may lead to a lower score of your contribution.</li>
+        </ul>
+        <h4>Contribution Value, Volume and Detail</h4>
+        <ul>
+          <li>In order to be considered for a reward, the contribution <b>must add value</b> to the Open Source project. Submissions that offer little to no added value to the project will not be eligible for potential reward.</li>
+          <li>The submission should contain as much detail as necessary, describing the work done and (when possible) offering added value to readers.</li>
+          <li>When applicable, graphical content like images, charts, videos and screenshots should be included.</li>
+          <li>The length of the body of the contribution should be sufficient to provide a thorough overview of the submitted contribution.</li>
+          <li>Texts should be structured using markdown to ensure readability. If you are not well familiar with Markdown or selected HTML tags to make your post look good, you can read more about it in <a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown</a>            on GitHub or in <a href="https://steemit.com/utopian-io/@espoem/make-your-posts-look-great-in-steemit-and-busy">this comprehensive guide</a> by @espoem.</li>
+        </ul>
+        <h4>Submission Originality</h4>
+        <p>All submitted contributions <b>must be unique.</b> To ensure your submission is eligible for potential reward, please check if an identical or very similar contribution was previously submitted.</p>
+        <ul>
+          <li>Duplicate submissions (by the same or different user) will not be eligible for potential reward.</li>
+          <li>Content shared previously will not be considered for reward if a moderator discovers plagiarism, and the user submitting it <b>will be banned</b> from Utopian.</li>
+          <li>All submissions must be a direct result of the contributor’s own work. Modifying the work/assets of others, or using a template while claiming it as fully original work will not be considered for reward, and the user submitting it <b>may be banned</b>            from Utopian.</li>
+        </ul>
+        <h4>Contribution Authorship</h4>
+        <ul style="margin-bottom: 50px;">
+          <li>To be eligible for potential reward, the submission post must include the information necessary to verify the identity of the contributor as the post author.</li>
+          <li>If a contributor’s Steem / Utopian username does not match the username used in an external platform, they should either edit the username on the external platform, or provide alternative means of verification.</li>
+          <li>Unless otherwise specified, every contributor should <b>only submit ONE</b> contribution post per task request. Use of multiple accounts to circumvent this rule will lead to <b>immediate ban</b> from Utopian services.</li>
+        </ul>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="categories">
+          <div><a href="#" class="circle reverse analysis" id="analysis" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Analysis"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M16,11.78L20.24,4.45L21.97,5.45L16.74,14.5L10.23,10.75L5.46,19H22V21H2V3H4V17.54L9.5,8L16,11.78Z"></path></svg> </a>
+          </div>
+          <div><a href="#" id="blogs" class="circle reverse blog" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Blogs"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M15,7H20.5L15,1.5V7M8,0H16L22,6V18A2,2 0 0,1 20,20H8C6.89,20 6,19.1 6,18V2A2,2 0 0,1 8,0M4,4V22H20V24H4A2,2 0 0,1 2,22V4H4Z"></path></svg></a>
+          </div>
+          <div><a href="#" id="bugs" class="circle reverse bug-hunting" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Bug Hunting"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M14,12H10V10H14M14,16H10V14H14M20,8H17.19C16.74,7.22 16.12,6.55 15.37,6.04L17,4.41L15.59,3L13.42,5.17C12.96,5.06 12.5,5 12,5C11.5,5 11.04,5.06 10.59,5.17L8.41,3L7,4.41L8.62,6.04C7.88,6.55 7.26,7.22 6.81,8H4V10H6.09C6.04,10.33 6,10.66 6,11V12H4V14H6V15C6,15.34 6.04,15.67 6.09,16H4V18H6.81C7.85,19.79 9.78,21 12,21C14.22,21 16.15,19.79 17.19,18H20V16H17.91C17.96,15.67 18,15.34 18,15V14H20V12H18V11C18,10.66 17.96,10.33 17.91,10H20V8Z"></path></svg></a>
+          </div>
+          <div><a href="#" id="development" class="circle reverse development" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Development"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6Z"></path></svg> </a>
+          </div>
+          <div><a href="#" id="documentation" class="circle reverse documentation" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Documentation"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M19,2L14,6.5V17.5L19,13V2M6.5,5C4.55,5 2.45,5.4 1,6.5V21.16C1,21.41 1.25,21.66 1.5,21.66C1.6,21.66 1.65,21.59 1.75,21.59C3.1,20.94 5.05,20.5 6.5,20.5C8.45,20.5 10.55,20.9 12,22C13.35,21.15 15.8,20.5 17.5,20.5C19.15,20.5 20.85,20.81 22.25,21.56C22.35,21.61 22.4,21.59 22.5,21.59C22.75,21.59 23,21.34 23,21.09V6.5C22.4,6.05 21.75,5.75 21,5.5V7.5L21,13V19C19.9,18.65 18.7,18.5 17.5,18.5C15.8,18.5 13.35,19.15 12,20V13L12,8.5V6.5C10.55,5.4 8.45,5 6.5,5V5Z"></path></svg></a>
+          </div>
+          <div><a href="#" id="graphics" class="circle reverse graphics" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Graphics"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M20.71,4.63L19.37,3.29C19,2.9 18.35,2.9 17.96,3.29L9,12.25L11.75,15L20.71,6.04C21.1,5.65 21.1,5 20.71,4.63M7,14A3,3 0 0,0 4,17C4,18.31 2.84,19 2,19C2.92,20.22 4.5,21 6,21A4,4 0 0,0 10,17A3,3 0 0,0 7,14Z"></path></svg></a>
+          </div>
+          <div><a href="#" id="copywriting" class="circle reverse copywriting" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Copywriting"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"></path></svg></a>
+          </div>
+          <div><a href="#" id="suggestions" class="circle reverse suggestions" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Suggestions"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M12,2A7,7 0 0,1 19,9C19,11.38 17.81,13.47 16,14.74V17A1,1 0 0,1 15,18H9A1,1 0 0,1 8,17V14.74C6.19,13.47 5,11.38 5,9A7,7 0 0,1 12,2M9,21V20H15V21A1,1 0 0,1 14,22H10A1,1 0 0,1 9,21M12,4A5,5 0 0,0 7,9C7,11.05 8.23,12.81 10,13.58V16H14V13.58C15.77,12.81 17,11.05 17,9A5,5 0 0,0 12,4Z"></path></svg></a>
+          </div>
+          <div><a href="#" id="tutorials" class="circle reverse tutorials" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Tutorials"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"></path></svg></a>
+          </div>
+          <div><a href="#" id="video-tutorials" class="circle reverse video-tutorials" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Video Tutorials"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z"></path></svg></a>
+          </div>
+          <div><a href="#" id="visibility" class="circle reverse visibility" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Visibility"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.19C16.5,7.69 17.21,8 18,8A3,3 0 0,0 21,5A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.81C7.5,9.31 6.79,9 6,9A3,3 0 0,0 3,12A3,3 0 0,0 6,15C6.79,15 7.5,14.69 8.04,14.19L15.16,18.34C15.11,18.55 15.08,18.77 15.08,19C15.08,20.61 16.39,21.91 18,21.91C19.61,21.91 20.92,20.61 20.92,19A2.92,2.92 0 0,0 18,16.08Z"></path></svg></a>
+          </div>
+        </div>
+        <div id="rules" style="margin-bottom: 50px;"></div>
+      </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="categories">
+          <div><a href="#" id="analysts" class="circle reverse analysis" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Analysts"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M16,11.78L20.24,4.45L21.97,5.45L16.74,14.5L10.23,10.75L5.46,19H22V21H2V3H4V17.54L9.5,8L16,11.78Z"></path></svg> </a>
+          </div>
+          <div><a href="#" id="bughunters" class="circle reverse bug-hunting" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Bug Hunters"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M14,12H10V10H14M14,16H10V14H14M20,8H17.19C16.74,7.22 16.12,6.55 15.37,6.04L17,4.41L15.59,3L13.42,5.17C12.96,5.06 12.5,5 12,5C11.5,5 11.04,5.06 10.59,5.17L8.41,3L7,4.41L8.62,6.04C7.88,6.55 7.26,7.22 6.81,8H4V10H6.09C6.04,10.33 6,10.66 6,11V12H4V14H6V15C6,15.34 6.04,15.67 6.09,16H4V18H6.81C7.85,19.79 9.78,21 12,21C14.22,21 16.15,19.79 17.19,18H20V16H17.91C17.96,15.67 18,15.34 18,15V14H20V12H18V11C18,10.66 17.96,10.33 17.91,10H20V8Z"></path></svg></a>
+          </div>
+          <div><a href="#" id="developers" class="circle reverse development" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Developers"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6Z"></path></svg> </a>
+          </div>
+          <div><a href="#" id="techwriters" class="circle reverse documentation" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Tech Writers"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M19,2L14,6.5V17.5L19,13V2M6.5,5C4.55,5 2.45,5.4 1,6.5V21.16C1,21.41 1.25,21.66 1.5,21.66C1.6,21.66 1.65,21.59 1.75,21.59C3.1,20.94 5.05,20.5 6.5,20.5C8.45,20.5 10.55,20.9 12,22C13.35,21.15 15.8,20.5 17.5,20.5C19.15,20.5 20.85,20.81 22.25,21.56C22.35,21.61 22.4,21.59 22.5,21.59C22.75,21.59 23,21.34 23,21.09V6.5C22.4,6.05 21.75,5.75 21,5.5V7.5L21,13V19C19.9,18.65 18.7,18.5 17.5,18.5C15.8,18.5 13.35,19.15 12,20V13L12,8.5V6.5C10.55,5.4 8.45,5 6.5,5V5Z"></path></svg></a>
+          </div>
+          <div><a href="#" id="designers" class="circle reverse graphics" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Designers"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M20.71,4.63L19.37,3.29C19,2.9 18.35,2.9 17.96,3.29L9,12.25L11.75,15L20.71,6.04C21.1,5.65 21.1,5 20.71,4.63M7,14A3,3 0 0,0 4,17C4,18.31 2.84,19 2,19C2.92,20.22 4.5,21 6,21A4,4 0 0,0 10,17A3,3 0 0,0 7,14Z"></path></svg></a>
+          </div>
+          <div><a href="#" id="copywriters" class="circle reverse copywriting" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Copywriters"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"></path></svg></a>
+          </div>
+          <div><a href="#" id="influencers" class="circle reverse visibility" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Influencers"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.19C16.5,7.69 17.21,8 18,8A3,3 0 0,0 21,5A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.81C7.5,9.31 6.79,9 6,9A3,3 0 0,0 3,12A3,3 0 0,0 6,15C6.79,15 7.5,14.69 8.04,14.19L15.16,18.34C15.11,18.55 15.08,18.77 15.08,19C15.08,20.61 16.39,21.91 18,21.91C19.61,21.91 20.92,20.61 20.92,19A2.92,2.92 0 0,0 18,16.08Z"></path></svg></a>
+          </div>
+        </div>
+        <div id="tasksrules" style="margin-bottom: 50px;">
+          <h4>Task Request Submission Guidelines</h4>
+          <p>Task requests are submitted by <b>Open Source project owners seeking contributions</b> to their project.</p>
+          <ul>
+            <li>Submitted tasks should be explained in great detail and provide all the necessary details to actually be completed.</li>
+            <li>Every Task Request Submission post should include one task request only. Submissions with multiple tasks requests will not be considered for reward or promotion.</li>
+            <li>Task Request Submissions should be submitted to the category relevant to the type of request.</li>
+            <li>Generic Task Request Submissions like "We are looking for contributors" will not be considered for reward or promotion.</li>
+            <li>Task Request Submissions should include a means of communication for the contributor to contact the task publisher.</li>
+            <li>Task Request Submissions should specify a deadline.</li>
+            <li>Images, screenshots, links and examples should be included as part of the submission, when applicable.</li>
+            <li>Project owners submitting a task request must remain available for inquiry. If no response or input from the project owner was received in 2 days, the submission will be scored as-is and may receive a lower score, thus reducing its chances
+              of reward and/or promotion.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <div id="footer" class="text-light">
+    <div class="container">
+      <h2>Let's make Open Source Economy a reality. Together.</h2>
+      <div class="row mt-5 pb-4">
+        <div class="col-sm mb-4">
+          <a href="https://imwatsi.github.io/utopian.io-help_center/guides/quickstart_contributors.html" target="_blank"><b>Get started as a contributor</b></a><br> Start contributing to Open Source projects and receive rewards for your contributions.
+        </div>
+        <div class="col-sm">
+          <a href="https://imwatsi.github.io/utopian.io-help_center/guides/quickstart_project-owners.html" target="_blank"><b>Submit your project to Utopian</b></a><br> Get the attention of valuable contributors and use the power of collective intelligence
+          to develop your project.
+        </div>
+      </div>
+      <hr>
+      <div class="row py-4">
+        <div class="col-md-1 footer-logo">
+          <img src="../img/logo.png" class="d-inline-block" style="width: 32px;" alt="Logo">
+        </div>
+        <div class="col">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://join.utopian.io/cookies">Cookie Policy</a> &nbsp;|&nbsp;
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://steemit.com/@utopian-io">Blog</a> &nbsp;|&nbsp;
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://join.utopian.io/rules">Rules</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 social-icons text-right d-flex align-items-end">
+          <div class="ml-auto">
+            <a href="https://www.facebook.com/utopian.io/" target="_blank">
+                        <svg style="width:32px;height:32px" viewBox="0 0 24 24">
+                            <path fill="#7583a5" d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M18,5H15.5A3.5,3.5 0 0,0 12,8.5V11H10V14H12V21H15V14H18V11H15V9A1,1 0 0,1 16,8H18V5Z" />
+                        </svg>
+                    </a>
+            <a href="https://twitter.com/utopian_io" target="_blank">
+                        <svg style="width:32px;height:32px" viewBox="0 0 24 24">
+                            <path fill="#7583a5" d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+                        </svg>
+                    </a>
+            <a href="https://github.com/utopian-io" target="_blank">
+                        <svg style="width:32px;height:32px" viewBox="0 0 24 24">
+                            <path fill="#7583a5" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                    </a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row pt-4">
+        <div class="col text-center disclaimer">
+          ALL INFORMATION ON UTOPIAN AND PROVIDED FROM OR THROUGH USE OF ITS SERVICES DOES NOT CONSTITUTE INVESTMENT ADVICE OR RECOMMENDATION. USERS SHOULD NOT MAKE ANY DECISION, FINANCIAL OR OTHERWISE, WITHOUT UNDERTAKING INDEPENDENT DUE DILIGENCE AND SEEKING
+          PROFESSIONAL FINANCIAL ADVICE.
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+    let analysis =
+      `<h4>Analysis</h4><p>Contributions in this category <b>include data analysis generated for an Open Source project.</b></p><ul><li>To be considered for potential reward, submissions must include the reasons for the analysis performed and its results.</li><li>To be considered for potential reward, submissions must include information detailing how the data was gathered and analyzed and (when applicable) what scripts used for the generation of the results.</li><li>To be considered for potential reward, submissions must include visual representation of the results in the form of charts, tables, and/or infographics.</li><li>Submissions of recurring analyses that are automatically generated by a script will not be considered for potential reward.</li><li>Submissions that include partial analysis should include public links to the full analysis.</li><li>To be considered for potential reward, submissions must contain conclusions or predictions based on the gathered data.</li><li>Analyses of social and behavioural changes of a specific group involved in the project will be not be considered for potential reward.</li></ul>`;
+
+    let blogs =
+      `<h4>Blog Posts</h4><p>Submissions to this category are designated to promote open source projects and to inform about their development. The posts are expected to include one of the following: <b>(1) Project Promotion, (2) Project Introduction, (3) Development Log.</b><ul><li>To be considered for potential reward, the blog post must contain <b>unique and insightful editorial content</b> presented in a professional format, ideally with high-quality visual supplements.</li><li><b>Project introduction and development logs</b> are meant to be written by project owners and closely collaborating members who have been appointed to publish the article.</li><li><b>Project introduction</b> must include detailed roadmaps and overviews to be considered for reward. It should contain differences with similar projects and highlight its unique aspects.</li><li><b>Development logs</b> should incorporate details of meaningful changes and an overview of new features. Development logs are not meant for minor version changes and bug fixes only. Content and information already submitted to other categories (such as development) cannot be considered for potential reward in the blog category.</li><li><b>Project promotion</b> contributions must include author's personal experience with the project to be considered for potential reward. Blog post with information processed from official sites and materials, and with no additional value will not be considered for potential reward. General promotion posts about the project are not to be considered for potential reward. We highly encourage promotion of new features, events and innovations of the project.</li><li>Promotion posts may include reports from recent conferences and social events dedicated to the project, which the author attended.</li><li>Project owners can also submit detailed results and summaries of recent public contests and task requests related to the project.</li><li>Submissions should include illustration images, screenshots, links and examples. Submissions without high quality visual content will be given a lower score, which may have effect on the possible vote.</li><li>Content and format of the submissions should be unique to the author. Submissions without original content will not be considered for potential reward.</li><li>If the submission is the first in a blog posts series, it should provide a list of the following submissions and overall expectations of it. Blog posts that are parts of a series should include links to the previous parts.</li></ul></p>`;
+
+    let bugs =
+      `<h4>Bug Hunting</h4><p>Contributions in this category include detailed <b>Bug Reports for actively maintained Open Source projects</b> describing unexpected behavior of applications (web or mobile).</p><ul><li>To be considered for potential reward, submissions must include sufficient detail to reproduce the bug, as well as screenshots, video recordings or animated GIFs if they help to describe and identify the reported bug.</li><li>To be considered for potential reward, submissions should only relate to bugs on the latest released version of the application. Users may need to download and build the latest version to ensure that they run the latest build provided in the project repository.</li><li>Submission title should include the app name and version number, as well as a brief description of the occuring issue ([Product Name] [Product Version] – Succinct description of the bug).</li><li>To be considered for potential reward, the project GitHub repository must accept <a href="https://help.github.com/articles/about-issues/">issues.</a></li><li>Bug Reports for projects in <a href="https://en.wikipedia.org/wiki/Software_release_life_cycle">pre-alpha stage</a> will not be considered for potential reward.</li><li>If the contributor made attempts to inform the Project Owner about the bug and confirm the issue, this should be noted in the post as it will be eligible for a higher score and potential reward. Note that said attempts to contact the Project Owner must adhere to Utopian Policies for contributor conduct on GitHub and other external services.</li><li>Submission of cosmetic or trivial UI issues (phone orientation, phone locking/unlocking etc.) that have negligible effect on the functionality of the application may lead to a lower score of your contribution, thus reducing your chances of receiving a reward.</li><li>Bug Reports for bugs on Android apps should be tested on Android 6.0 and above, and include the logcat reports in the post. You can learn more about how to generate logcat <a href="https://android.gadgethacks.com/how-to/android-basics-capture-logcat-for-detailed-bug-reports-0167774/">here.</a></li></ul>`;
+
+    let development =
+      `<h4>Development</h4><p>Submissions to the development category include <b>(1) Bug Fixes; (2) New Features and (3) Contributor’s Own Projects.</b></p><ul><li>Submissions should include a comprehensible commit history. Projects or updates submitted in a single commit will not be considered for potential reward.</li><li>Inclusion of outdated or low quality code may lead to a lower score of your contribution, thus reducing your chances of receiving a reward.</li><li>Generated code or other results of automated processes will not be considered for potential reward.</li><li>Submitted contributions should offer unique value. Redundant projects, trivial code snippets, example code or simple templates will not be considered for potential reward.</li><li>To be considered for potential reward, Bug Fixes and New Features should be submitted via Pull Requests. The Pull Request should have been merged within the past 14 days.</li><li>Updates on Own Projects may be committed directly, without a Pull Request. To be considered for potential reward, commits should not be older than 14 days.</li><li>Bug Fixes for contributor’s Own Projects will not be considered for potential reward, unless the Bugs were caused by third party dependencies.</li></ul>`;
+
+    let documentation =
+      `<h4>Documentation</h4><p>Contributions to this category contain only <b>official documentation</b> of Open Source projects on GitHub.</p><ul><li>Only merged Pull Requests on the official repository or on a fork will be considered for potential reward, as long as the fork is not just a mirror of the original repository.</li><li>If the submission does not include the full documentation project, public links to it should be provided.</li><li>Unofficial documentation will not be considered for potential reward.</li></ul><p>See <a href="https://steemit.com/utopian-io/@amosbastian/documentation-for-fpl-0-3-1-a-python-wrapper-for-the-fantasy-premier-league-api">example.</a></p>`;
+
+    let graphics =
+      `<h4>Graphics</h4><p>Contributions in this category include <b>(1) graphic illustrations; (2) videos and/or (3) motion graphics</b> created for an open source project by the contributor.</p><ul><li>Submissions will be considered for reward <b>only if the work was explicitly requested by the project owner</b> (linked to a Task Request), or if the contributor can provide a clear proof that their submission has been accepted by the PO and used in the project.</li><li>To be considered for potential reward, submissions must contain the final product (downloadable file of the work), sample of the work, applications of it, comparison to the existing product (when applicable), and benefits of the work to the project owner.</li><li>T-shirts and merchandise production will be not be considered for reward.</li><li>Graphics submissions (excluding logo designs) should be delivered in .psd, .ai, .cdr or any other universally accepted file format. </li><li>To be considered for potential reward, logos should be delivered in a vector file (e.g. .eps/.svg/.pdf) for flexibility and scalability, as well as .png file format for immediate use of the logo.</li><li>To be considered for potential reward, submissions must include credits to all third-party images/assets used in the contribution. It is up to the contributor to ensure they have permission to use these assets (images, videos, fonts, 3D models etc.) for commercial use.</li><li>Logo design submissions should contain the actual logo (logomark/logotype), the logo in a form of an app (icon in case that the project has a mobile application), logo variations in terms of size and colour (one colour and full-colour versions). <ul><li>Examples <ul><li> <a href="https://steemit.com/utopian-io/@andrejcibik/logo-for-chatsecure-open-source-private-chat-ios-app">https://steemit.com/utopian-io/@andrejcibik/logo-for-chatsecure-open-source-private-chat-ios-app</a></li><li> <a href="https://steemit.com/utopian-io/@oups/utopian-io-logo-re-design">https://steemit.com/utopian-io/@oups/utopian-io-logo-re-design</a></li><li> <a href="https://steemit.com/utopian-io/@andrejcibik/steemgigs-2-logos-proposal">https://steemit.com/utopian-io/@andrejcibik/steemgigs-2-logos-proposal</a></li></ul></li></ul></li><li>Any text or fonts should be converted into shapes or “outlined”.</li><li>Submissions should include a content license that does not violate the project's license, while allowing for the commercial use of contributed assets in and by the project.</li><li>Unless otherwise specified in the linked task request, designs should be delivered in a vector format.</li><li>Submissions should (ideally) be coordinated with the project owner throughout the design process.</li></ul>`;
+
+    let copywriting =
+      `<h4>Copywriting</h4><p>Submissions to this category are limited to <b>copywriting of text content</b> for Open Source projects on GitHub.</p><ul><li>Any type of copywriting submission is eligible for a potential reward from Utopian, <b>only if it was explicitly requested by the project owner</b> in a Utopian task request or through a <b>verifiable public request.</b></li><li>Standardized documents, such as Terms of Service, Privacy Policies, Legal Disclaimers and other standardized content, will not be considered for potential rewards <b>unless they offer a significant degree of customization and alterations</b> to suit the project's needs.</li><li>If the work is submitted via GitHub, only <b>merged</b> Pull Requests on the official repository or on a fork will be eligible, as long as the fork is not just a mirror of the original repository.</li><li>If the submission does not include the complete work, public links to it should be provided.</li><li>Copywriters who seek to contact Project Owners on behalf of Utopian.io should do so with the aid of the Community Manager, by opening a <a href="https://support.utopian.io/">support ticket</a> in the Copywriting department.</li></ul>`;
+
+    let suggestions =
+      `<h4>Suggestions</h4><p>Suggestions detail potentially beneficial significant technical features / enhancements to an Open Source project.</p><ul><li>Suggestions relating to product or organizational processes will not be considered for reward.</li><li>Submissions should include extensive details and (when possible) instructions for the suggested feature to be actualized.</li><li>Images, charts, screenshots, links, references and examples should be included when applicable.</li><li>Suggestion of trivial and/or very common features in similar/alternative apps will not be considered for potential reward.</li></ul>`;
+
+    let tutorials =
+      `<h4>Tutorials</h4><p>Contributions in this category include <b>technical instructions using text and illustrations to clearly explain and teach significant aspects of an Open Source project.</b><br />Contributors may refer to the following resource when writing tutorial submissions - <a href="https://owl.english.purdue.edu/owl/resource/656/02/">https://owl.english.purdue.edu/owl/resource/656/02/</a></p><ul><li>To be considered for potential reward, submissions must include the full tutorial in the Utopian post.</li><li>Submissions presenting content creation and simple on-screen instruction will not be considered for potential reward.</li><li>End-user focused tutorials should provide clear instructions of substantial project functions that are unique to that specific Open Source project and essential learning requirements for end-users.</li><li>Submissions addressing only circuit design and/or the build of specific electronic modules will be not be considered for potential reward.</li><li>Submission may not be considered for a potential reward if the content submitted does not provide sufficient value in term of volume, potential impact and relevance.</li><li>Submissions focused on the use of functions that are already well documented in the project documentation will be not be considered for potential reward.</li><li>Submissions containing (1) design or video editing related tutorials, (2) gameplay, (3) extensive basic instructions for/in ubiquitous functions (Save, Open, Print, etc.) or (4) basic programming concepts (variables, operators, loops, etc.) will be not be considered for potential reward.</li><li>A submission may be refused potential rewards if the moderator provides a link to a superior tutorial on the same subject.</li><li>Machine translated tutorials will be not be considered for potential reward.</li><li>Contributors providing a video version of a text tutorial should embed or link to the video in the post. Note that contributors cannot submit this video as a separate contribution in the Video Tutorial category.</li><li>Links to the supplementary repository for the post should be included in the submission post.</li><li>Submissions containing unexplained essential steps, codes or examples will not be considered for potential reward.</li></ul>`;
+
+    let videotutorials =
+      `<h4>Video Tutorials</h4><p>Contributions in this category include <b>technical instructions that explain and teach significant aspects of an Open Source project,</b> and are presented in video format.</p><ul><li>To be considered for potential reward, end-user focused tutorials must provide clear instructions of substantial project functions that are unique to that specific Open Source project and essential learning requirements for end-users.</li><li>Tutorials containing process videos, such as gameplay, content creation, simple on-screen instructions, basic instructions for/in ubiquitous functions (Save, Open, Print, etc.), or (4) basic programming concepts (variables, operators, loops, etc.) will not be considered for potential reward.</li><li>To verify authorship, submissions should include mention of the contributor’s Utopian account name at the beginning of the video.</li><li>A submission may be refused potential rewards if the moderator provides a link to a superior tutorial on the same subject.</li><li>To be considered for potential reward, video tutorials should be presented in an organized and well prepared fashion. Presenters should speak clearly and professionally and videos should not contain any substantial pauses. </li><li>Video Tutorials using machine generated voice-over will not be considered for potential reward.</li><li>Video resolution should be at least 720p (HD). Audio should be of high quality and not contain any substantial background noise or distortions.</li><li>Submitted video should be hosted on either YouTube or DTube and embedded in the submission post and must not be older than 14 days.   </li><li>Contributors providing a text version of a video tutorial should include the full text or a link to the full text in their submissions. Note that contributors cannot submit this text as a separate contribution in the Tutorial category.</li><li>Submissions that include a GitHub repository with additional materials (like code samples), should be linked to the repository of the original project discussed in the tutorial and not the supplementary repository created for the contribution. Links to the supplementary repository for the post should be included in the submission post.</li><li>Submissions containing unexplained essential steps, codes or examples will not be considered for potential reward.</li><li>Submissions addressing only circuit design and/or the build of specific electronic modules will not be considered for potential reward.</li></ul>`;
+
+    let visibile =
+      `<h4>Visibility</h4><p>Contributions in the visibility category are <b>(1) paid search engine and display ads placement; (2) paid social media ads; (3) Thunderclap campaigns and (4) posts to social media accounts with at least 10,000 unique followers.</b></p><ul><li>To be considered for potential reward, submissions to this category <b>must be explicitly requested by the project owner</b> via Influencer task request, <b>or the project must be included in the</b> <a href="https://docs.google.com/spreadsheets/d/1S7ayFTEy5CBMyeJvFRgq5JUjlqZxFjWAWhhrBL0GC60">Utopian Visibility Whitelist</a> for the activities performed.</li><li>Promotions on chat platforms (e.g. Whatsapp, Telegram and similar) and Instagram will not be considered for potential reward (unless otherwise specified by the project owner in the Task Request).</li><li>The submitted campaign should performance with a <b>minimal total reach of at least 10,000 unique users and CTR (click-through rate) of over 1.5% on Twitter and 1% on Facebook</b> (unless otherwise specified by the project owner in the Task Request).</li><li>To be considered for potential reward, submissions should include <b>valid and verifiable proof</b> of the visibility activities undertaken including: <ul><li>An overview of the goals, bidding strategy, details and choice of target audience, reasoning of said choice, as well as results of the campaign.</li><li>Ad copy and graphics used in the campaign.</li><li>Downloadable reports (when available) pertaining the activity.</li><li>Screenshots of the promotional activity from the platform used.</li><li>Links to promoted content, landing page and (when applicable) a link to the ad itself.</li></ul></li><li>To be considered for potential reward, ad content and social media messages in any language other than English must be accompanied by a translation.</li><li>Ad content and targeting chosen should show the contributor’s understanding of the project and experience in its applications and uses.</li><li>To be considered for potential reward, campaign content must adhere to Utopian Forbidden Content Policies.</li></ul>`;
+
+    let developers =
+      `<h4>Developers</h4><p>Task requests to this category are submitted by <b>Open Source project owners recruiting developers to perform a specific development task</b> on their project.</p><ul><li>Submissions should include all the relevant and necessary technical details for the developers to contribute to your project, such as scope, timeframe, stage of development, etc.</li><li>Submissions should include links to Documentation, Repositories, Communities (e.g. Slack, Discord) and any other relevant information.</li></ul>`
+
+    let bughunters =
+      `<h4>Bug Hunters</h4><p>Task requests to this category are submitted by <b>Open Source project owners</b> looking for contributors to <b>spot bugs in their project</b> service / system / software / website.</p><ul><li>Submissions should include all relevant information for bug hunters to be able to perform the task requested, including the type of logs, conclusions and examples.</li><li>Submissions should list the environments on which bugs should be tested for (i.e. browsers, devices, operating systems and other conditions under which bugs may appear).</li></ul>`
+
+    let designers =
+      `<h4>Designers</h4><p>Task requests to this category are submitted by <b>Open Source project owners recruiting designers</b> to perform a specific task in visual design and/or production.</p><ul><li>Submissions should include extensive detail describing the desired outcome.</li><li>Submissions should include prefered file type for submission, file dimensions, aspect ratio, and any additional information necessary for the graphic component design and production.</li></ul>`
+
+    let techwriters =
+      `<h4>Tech Writers</h4><p>Task requests to this category are submitted by <b>Open Source project owners</b> requiring  assistance in <b>updating / creating the documentation of their project.</b></p><ul><li>Submissions should include extensive detail describing the desired outcome.</li><li>Submissions should include the requested features for documentations, desired length of document and any information pertinent to project documentation.</li><li>Submissions should include links to the tools and information necessary for documentation production and examples (when applicable).</li></ul>`
+
+    let analysts =
+      `<h4>Data Analysts</h4><p>Task requests to this category are submitted by <b>Open Source project owners</b> requesting <b>statistical analysis of their project</b>.</p><ul><li>Submissions should specify the desired insights from the analysis requested.</li><li>Submissions should include specific variables and conditions to process the extracted data.</li><li>Submissions should include the tools and information necessary for the analysis process.</li></ul>`
+
+    let influencers =
+      `<h4>Influencers</h4><p>Task submissions to this category include <b>requests by Open Source project owners</b> for the involvement of social influencers in <b>creating public awareness of their project</b>.</p><ul><li>Submissions should include the information and data necessary for influencers to effectively advertise the Open Source project.</li><li>Submissions should include all graphic, video and other resources influencers are expected to share.</li><li>Submission should detail the requirements of the visibility effort on the behalf of the influencer in terms of campaign goals, platform, target audience, and expected results.</li></ul>`
+
+    let copywriters =
+      `<h4>Copywriters</h4><p>Task submissions to this category include <b>requests by Open Source project owners</b> for assistance in <b>updating / creating text copy for their project</b>.</p><ul><li>Submissions should include enough detail to inform contributors what content needs to be written and for what use or purpose.</li><li>Specifications such as word count, tone of message and other linguistic requirements should be included when applicable.</li><li>Submissions should include adequate information on how contributions must be submitted to the project itself, where they can be implemented (such as GitHub) and any deadlines to be met, if applicable.</li></ul>`
+
+    window.addEventListener("load", function() {
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#4786ff",
+            "text": "#ffffff"
+          },
+          "button": {
+            "background": "transparent",
+            "text": "#fff",
+            "border": "#fff"
+          }
+        },
+        "content": {
+          "href": "https://join.utopian.io/cookies"
+        }
+      })
+      $('.categories').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 6,
+        slidesToScroll: 3,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          }
+        ]
+      });
+    })
+
+    let navitem = document.getElementsByClassName('nav-item')
+
+    Array.from(navitem).forEach(function(element) {
+      element.addEventListener('click', refreshslick);
+    });
+
+    function refreshslick() {
+      try {
+        $(".categories").slick("refresh");
+      } catch (e) {
+
+      }
+      let analysisbut = document.getElementById('analysis')
+      let blogbut = document.getElementById('blogs')
+      let bugbut = document.getElementById('bugs')
+      let copybut = document.getElementById('copywriting')
+      let devbut = document.getElementById('development')
+      let docbut = document.getElementById('documentation')
+      let graphicsbut = document.getElementById('graphics')
+      let suggestionbut = document.getElementById('suggestions')
+      let tutbut = document.getElementById('tutorials')
+      let vtutbut = document.getElementById('video-tutorials')
+      let analystsbut = document.getElementById('analysts')
+      let bughuntersbut = document.getElementById('bughunters')
+      let developersbut = document.getElementById('developers')
+      let techwritersbut = document.getElementById('techwriters')
+      let designersbut = document.getElementById('designers')
+      let copywritersbut = document.getElementById('copywriters')
+      let influencersbut = document.getElementById('influencers')
+      try {
+        analysisbut.addEventListener('click', () => {
+          let rules = document.getElementById('rules')
+          rules.innerHTML = analysis;
+        })
+        blogbut.addEventListener('click', () => {
+          let rules = document.getElementById('rules')
+          rules.innerHTML = blogs;
+        })
+        bugbut.addEventListener('click', () => {
+          let rules = document.getElementById('rules')
+          rules.innerHTML = bugs;
+        })
+        copybut.addEventListener('click', () => {
+          let rules = document.getElementById('rules')
+          rules.innerHTML = copywriting;
+        })
+        devbut.addEventListener('click', () => {
+          let rules = document.getElementById('rules')
+          rules.innerHTML = development;
+        })
+        docbut.addEventListener('click', () => {
+          let rules = document.getElementById('rules')
+          rules.innerHTML = documentation;
+        })
+        graphicsbut.addEventListener('click', () => {
+          let rules = document.getElementById('rules')
+          rules.innerHTML = graphics;
+        })
+        suggestionbut.addEventListener('click', () => {
+          let rules = document.getElementById('rules')
+          rules.innerHTML = suggestions;
+        })
+        tutbut.addEventListener('click', () => {
+          let rules = document.getElementById('rules')
+          rules.innerHTML = tutorials;
+        })
+        vtutbut.addEventListener('click', () => {
+          let rules = document.getElementById('rules')
+          rules.innerHTML = videotutorials;
+        })
+        visiblebut.addEventListener('click', () => {
+          let rules = document.getElementById('rules')
+          rules.innerHTML = visibile;
+        })
+      } catch (e) {
+
+      }
+      try {
+        analystsbut.addEventListener('click', () => {
+          let tasksrules = document.getElementById('tasksrules')
+          tasksrules.innerHTML = analysts;
+        })
+        bughuntersbut.addEventListener('click', () => {
+          let tasksrules = document.getElementById('tasksrules')
+          tasksrules.innerHTML = bughunters;
+        })
+        developersbut.addEventListener('click', () => {
+          let tasksrules = document.getElementById('tasksrules')
+          tasksrules.innerHTML = developers;
+        })
+        techwritersbut.addEventListener('click', () => {
+          let tasksrules = document.getElementById('tasksrules')
+          tasksrules.innerHTML = techwriters;
+        })
+        designersbut.addEventListener('click', () => {
+          let tasksrules = document.getElementById('tasksrules')
+          tasksrules.innerHTML = designers;
+        })
+        copywritersbut.addEventListener('click', () => {
+          let tasksrules = document.getElementById('tasksrules')
+          tasksrules.innerHTML = copywriters;
+        })
+        influencersbut.addEventListener('click', () => {
+          let tasksrules = document.getElementById('tasksrules')
+          tasksrules.innerHTML = influencers;
+        })
+      } catch (e) {
+
+      }
+    }
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115955870-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-115955870-1');
+  </script>
+</body>
+
+</html>
