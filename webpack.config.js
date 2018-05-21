@@ -11,6 +11,7 @@ module.exports = {
         cookies: './src/cookies/index.js',
         privacy: './src/privacy/index.js',
         tos: './src/tos/index.js',
+        guidelines: './src/guidelines/index.js'
     },
     output: {
         filename: '[name]-bundle.js',
@@ -96,6 +97,14 @@ module.exports = {
             chunks: ['tos'],
             template: 'src/tos/index.html',
             filename: '../dist/tos/index.html',
+            minify: {
+                collapseWhitespace: true
+            }
+        }),
+        new HtmlWebpackPlugin({
+            chunks: ['guidelines'],
+            template: 'src/guidelines/index.html',
+            filename: '../dist/guidelines/index.html',
             minify: {
                 collapseWhitespace: true
             }
