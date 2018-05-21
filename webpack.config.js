@@ -78,7 +78,7 @@ module.exports = {
             }
         }),
         new HtmlWebpackPlugin({
-            chunks: ['rules'],
+            chunks: ['cookies'],
             template: 'src/cookies/index.html',
             filename: '../dist/cookies/index.html',
             minify: {
