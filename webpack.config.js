@@ -7,7 +7,7 @@ module.exports = {
         main: './src/index.js',
         owners: './src/owners/index.js',
         investors: './src/investors/index.js',
-        rules: './src/guidelines/index.js',
+        rules: './src/rules/index.js',
         cookies: './src/cookies/index.js',
         privacy: './src/privacy/index.js',
         tos: './src/tos/index.js',
@@ -71,8 +71,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             chunks: ['rules'],
-            template: 'src/guidelines/index.html',
-            filename: '../dist/guidelines/index.html',
+            template: 'src/rules/index.html',
+            filename: '../dist/rules/index.html',
             minify: {
                 collapseWhitespace: true
             }
