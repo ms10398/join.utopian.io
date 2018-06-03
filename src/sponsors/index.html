@@ -1,0 +1,2006 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Earn rewards by contributing to your favorite Open Source projects! Utopian is the only platform rewarding contributions to Open Source projects by utilizing a decentralised, vote-based reward system built on top of the STEEM Blockchain.">
+  <meta name="author" content="Utopian Company S.r.l.s.">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+
+  <title>Utopian.io - Open Source Economy</title>
+
+  <style>
+    body {
+      margin: 0;
+    }
+
+    #cover {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #24292e;
+      z-index: 9999;
+      text-align: center;
+    }
+
+    .spinner {
+      animation-name: spin;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      width: 24px;
+      height: 24px;
+      margin: 15px;
+    }
+
+    @-moz-keyframes spin {
+      from {
+        -moz-transform: rotate(0deg);
+      }
+      to {
+        -moz-transform: rotate(360deg);
+      }
+    }
+
+    @-webkit-keyframes spin {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .card {
+      background: white;
+      margin-bottom: 2em;
+      min-width: 300px;
+    }
+
+    .card:hover {
+      box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+    }
+
+    .card a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .card-content {
+      padding: 1.4em;
+    }
+
+    .card-content h2 {
+      margin-top: 0;
+      margin-bottom: .5em;
+      font-weight: bold;
+    }
+
+    .card-content p {
+      font-size: 80%;
+    }
+
+    /* Flexbox stuff */
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .card {
+      flex: 1 0 380px;
+      box-sizing: border-box;
+      margin: 1rem .25em;
+    }
+
+    @media screen and (min-width: 40em) {
+      .card {
+        max-width: calc(50% - 1em);
+      }
+    }
+
+    @media screen and (min-width: 60em) {
+      .card {
+        max-width: calc(40% - 1em);
+      }
+    }
+
+    @media screen and (min-width: 80em) {
+      .card {
+        max-width: calc(30% - 1em);
+      }
+    }
+
+    .centered {
+      margin: 0 auto;
+      padding: 0 1em;
+    }
+
+    @media screen and (min-width: 52em) {
+      .centered {
+        max-width: 75%;
+      }
+    }
+
+    .image {
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      margin: 12px;
+    }
+
+    .witness {
+      color: blue !important;
+      margin-top: -5px !important;
+    }
+
+    .main-area {
+      margin-bottom: 50px;
+    }
+  </style>
+
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+
+  <link rel="icon" type="image/png" href="../img/favicon.png" />
+  <!-- Facebook Pixel Code -->
+  <script>
+    ! function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '155330168420592');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img name="pixel" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=155330168420592&ev=PageView&noscript=1"/></noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <script type="text/javascript" src="https://cdn.iubenda.com/consent_solution/iubenda_cons.js"></script>
+  <script type="text/javascript">
+    _iub.cons.init({
+      api_key: "xyN2wrqdm8sv9K2f760JcCmZ1QRWHhyR"
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <div id="cover">
+    <svg class="spinner" viewBox="0 0 24 24">
+        <path fill="#fff" d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" />
+    </svg>
+  </div>
+
+  <a id="top"></a>
+  <div id="navbar">
+    <div class="container">
+      <nav class="navbar fixed-top navbar-dark navbar-expand-lg">
+        <a class="navbar-brand smoothscroll" href="/">
+                <img src="../img/logo.png" class="d-inline-block mr-1 mb-1" alt="Logo">
+                Utopian
+            </a>
+        <button class="hamburger hamburger--minus js-hamburger hidden-sm" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">About Utopian</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smoothscroll" href="/investors">Investors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#steemSignupModal" data-toggle="modal">Sign Up</a>
+            </li>
+            <!--<li class="nav-item">-->
+            <!--<a class="nav-link" href="#scRedirectModal" data-toggle="modal">Login</a>-->
+            <!--</li>-->
+            <li class="nav-item">
+              <a class="nav-link" href="#loginInfoModal" data-toggle="modal">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <center>
+    <h2 style="margin-top: 100px">Our Sponsors</h2>
+  </center>
+  <main class="main-area">
+    <div class="centered">
+      <section class="cards">
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/freedom/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@freedom">
+            <div class="card-content">
+              <center>
+                <h3>freedom</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=freedom&approve=1">Vote for Witness</a></h6>
+                <h6>Delegated SP</h6>
+                <h6>1,229,630.428 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@misterdelegation">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/misterdelegation/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>misterdelegation</h3>
+                <h6>Delegated SP</h6>
+                <h6>1,024,681.758 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@ned">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/ned/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>ned</h3>
+                <h6>Delegated SP</h6>
+                <h6>1,015,849.014 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/wackou/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@wackou">
+            <div class="card-content">
+              <center>
+                <h3>wackou</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=wackou&approve=1">Vote for Witness</a></h6>
+                <h6>Delegated SP</h6>
+                <h6>98,370.434 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/xeldal/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@xeldal">
+            <div class="card-content">
+              <center>
+                <h3>xeldal</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=xeldal&approve=1">Vote for Witness</a></h6>
+                <h6>Delegated SP</h6>
+                <h6>50,227.908 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/lafona-miner/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@lafona-miner">
+            <div class="card-content">
+              <center>
+                <h3>lafona-miner</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=lafona-miner&approve=1">Vote for Witness</a></h6>
+                <h6>Delegated SP</h6>
+                <h6>24,592.609 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@cnts">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/cnts/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>cnts</h3>
+                <h6>Delegated SP</h6>
+                <h6>21,279.181 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/netuoso/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@netuoso">
+            <div class="card-content">
+              <center>
+                <h3>netuoso</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=netuoso&approve=1">Vote for Witness</a></h6>
+                <h6>STEEM Witness, SteemDevs Founder, Owner of https://rpc.steemliberator.com</h6>
+                <h6>Delegated SP</h6>
+                <h6>20,011.393 SP	</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/thecryptodrive/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@thecryptodrive">
+            <div class="card-content">
+              <center>
+                <h3>thecryptodrive</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=thecryptodrive&approve=1">Vote for Witness</a></h6>
+                <h6>Blockchain Entrepreneur, Steem Witness and all-round Good Guy!</h6>
+                <h6>Delegated SP</h6>
+                <h6>12,122.596 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@minnowbooster">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/minnowbooster/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>minnowbooster</h3>
+                <h6>This is still beta!</h6>
+                <h6>Delegated SP</h6>
+                <h6>10,102.164 SP	</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/jesta/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@jesta">
+            <div class="card-content">
+              <center>
+                <h3>jesta</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=jesta&approve=1">Vote for Witness</a></h6>
+                <h6>Delegated SP</h6>
+                <h6>10,089.413 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@created">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/created/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>created</h3>
+                <h6>Delegated SP</h6>
+                <h6>5,169.667 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/ajvest/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@ajvest">
+            <div class="card-content">
+              <center>
+                <h3>ajvest</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=ajvest&approve=1">Vote for Witness</a></h6>
+                <h6>Delegated SP</h6>
+                <h6>4,046.727 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@k-rapper">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/k-rapper/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>k-rapper</h3>
+                <h6>Delegated SP</h6>
+                <h6>2,592.426 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@materia">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/materia/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>materia</h3>
+                <h6>Delegated SP</h6>
+                <h6>2,528.374 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@da-dawn">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/da-dawn/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>da-dawn</h3>
+                <h6>Saving account for building a off grid steemit community in British Columbia, and finding the best on steemit!</h6>
+                <h6>Delegated SP</h6>
+                <h6>2,131.666 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/yabapmatt/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@yabapmatt">
+            <div class="card-content">
+              <center>
+                <h3>yabapmatt</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=yabapmatt&approve=1">Vote for Witness</a></h6>
+                <h6>Steem Witness / Developer / Creator of SteemBotTracker.com and the Post Promoter content promotion software.</h6>
+                <h6>Delegated SP</h6>
+                <h6>2,023.419 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/forykw/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@forykw">
+            <div class="card-content">
+              <center>
+                <h3>forykw</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=forykw&approve=1">Vote for Witness</a></h6>
+                <h6>Love trying stuff!</h6>
+                <h6>Delegated SP</h6>
+                <h6>2,018.672 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/delegate.lafona/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@delegate.lafona">
+            <div class="card-content">
+              <center>
+                <h3>delegate.lafona</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=delegate.lafona&approve=1">Vote for Witness</a></h6>
+                <h6>Delegated SP</h6>
+                <h6>1,967.409 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@walterjay">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/walterjay/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>walterjay</h3>
+                <h6>SteemCurator, blockchain enthusiast, junior software developer, novice writer, traveler & investor</h6>
+                <h6>Delegated SP</h6>
+                <h6>1,623.112 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/teamsteem/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@teamsteem">
+            <div class="card-content">
+              <center>
+                <h3>teamsteem</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=teamsteem&approve=1">Vote for Witness</a></h6>
+                <h6>Steem Witness, Crypto Enthusiast, Observant of the non-aggression principle towards all sentient beings</h6>
+                <h6>Delegated SP</h6>
+                <h6>1,317.920 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/lukestokes.mhth/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@lukestokes.mhth">
+            <div class="card-content">
+              <center>
+                <h3>lukestokes.mhth</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=lukestokes&approve=1">Vote for Witness</a></h6>
+                <h6>This is the More Human Than Human witness account for @lukestokes</h6>
+                <h6>Delegated SP</h6>
+                <h6>1,019.372 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@dylanhobalart">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/dylanhobalart/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>dylanhobalart</h3>
+                <h6>Found Art, Metal Art, Surrealism, Blockchain, Activist</h6>
+                <h6>Delegated SP</h6>
+                <h6>706.877 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@blakemiles84">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/blakemiles84/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>blakemiles84</h3>
+                <h6>Unconventional Warfare is one of my happy places. #GreenBeret in a previous life. I don't take kindly to tyrants.</h6>
+                <h6>Delegated SP</h6>
+                <h6>654.995 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@temponaut">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/temponaut/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>temponaut</h3>
+                <h6>Cryptofanatic since 2012. Lover of tech, science, and tea. Listen to and recently started producing Drum & Bass music.</h6>
+                <h6>Delegated SP</h6>
+                <h6>550.657 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@aymenz">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/aymenz/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>aymenz</h3>
+                <h6>Gaming Video Maker , Web Designer And Developer</h6>
+                <h6>Delegated SP</h6>
+                <h6>504.899 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@gregario">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/gregario/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>gregario</h3>
+                <h6>No hay guerra buena. No hay paz mala.</h6>
+                <h6>Delegated SP</h6>
+                <h6>502.491 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@icaro">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/icaro/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>icaro</h3>
+                <h6>I'm a developer and a blockchain enthusiast. I write mostly about cryptocurrencies and open source projects.</h6>
+                <h6>Delegated SP</h6>
+                <h6>451.059 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@kit.andres">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/kit.andres/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>kit.andres</h3>
+                <h6>Software developer | Blockchain enthusiast | Swimmer, climber and cyclist.</h6>
+                <h6>Delegated SP</h6>
+                <h6>430.691 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@randomli">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/randomli/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>randomli</h3>
+                <h6>Delegated SP</h6>
+                <h6>373.434 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/bycz/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@bycz">
+            <div class="card-content">
+              <center>
+                <h3>bycz</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=bycz&approve=1">Vote for Witness</a></h6>
+                <h6>Tech guy, crypto investor, 3D specialist, developer in rest time and father.</h6>
+                <h6>Delegated SP</h6>
+                <h6>352.937 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/helo/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@helo">
+            <div class="card-content">
+              <center>
+                <h3>helo</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=helo&approve=1">Vote for Witness</a></h6>
+                <h6>Witness - Developer</h6>
+                <h6>Delegated SP</h6>
+                <h6>312.636 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@espoem">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/espoem/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>espoem</h3>
+                <h6>Utopian Community Manager</h6>
+                <h6>Delegated SP</h6>
+                <h6>302.673 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@mooncryption">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/mooncryption/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>mooncryption</h3>
+                <h6>cryptocurrency | bitcoin | steem | science | technology</h6>
+                <h6>Delegated SP</h6>
+                <h6>302.345 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@tensor">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/tensor/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>tensor</h3>
+                <h6>Tensor programming is aimed at providing programming education through both youtube and blogs.</h6>
+                <h6>Delegated SP</h6>
+                <h6>300.009 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@magicmonk">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/magicmonk/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>magicmonk</h3>
+                <h6>Creator of MySteemitFriends.online and MagicMonk.org</h6>
+                <h6>Delegated SP</h6>
+                <h6>251.723 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@firedream">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/firedream/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>firedream</h3>
+                <h6>engineer, thinker</h6>
+                <h6>Delegated SP</h6>
+                <h6>250.269 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@scottweston">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/scottweston/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>scottweston</h3>
+                <h6>A UNIX Systems Administrator, Developer and Hacker</h6>
+                <h6>Delegated SP</h6>
+                <h6>239.914 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@steemj">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/steemj/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>steemj</h3>
+                <h6>SteemJ - A simple Steem API Wrapper for Java</h6>
+                <h6>Delegated SP</h6>
+                <h6>229.197 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@nunojesus">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/nunojesus/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>nunojesus</h3>
+                <h6>Delegated SP</h6>
+                <h6>184.445 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@zapata42">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/zapata42/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>zapata42</h3>
+                <h6>Delegated SP</h6>
+                <h6>151.443 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@lykkejay">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/lykkejay/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>lykkejay</h3>
+                <h6>Blockchain Enthusiast | Crypto Trader | Entrepreneur</h6>
+                <h6>Delegated SP</h6>
+                <h6>148.661 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@edgar-trem">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/edgar-trem/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>edgar-trem</h3>
+                <h6>I write code</h6>
+                <h6>Delegated SP</h6>
+                <h6>130.304 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@sevlom777">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/sevlom777/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>sevlom777</h3>
+                <h6>Photographer, Animator, Entrepreneur with Creative ideas to empower people!</h6>
+                <h6>Delegated SP</h6>
+                <h6>119.039 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@booster916">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/booster916/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>booster916</h3>
+                <h6>24 yrs old, studying mechanical engineering, love motorcycles, sport enthusiast, gymnast, cryptocurrencys and memes</h6>
+                <h6>Delegated SP</h6>
+                <h6>102.242 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@abh12345">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/abh12345/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>abh12345</h3>
+                <h6>Witness: @steemcommunity | Life | Travel | Steemit | Utopian-io</h6>
+                <h6>Delegated SP</h6>
+                <h6>100.983 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@theb0red1">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/theb0red1/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>theb0red1</h3>
+                <h6>Playing SteemPunk.Net --- Fight Me! I post mostly about my everyday life | Co-Blogging with Miss Scrumptious</h6>
+                <h6>Delegated SP</h6>
+                <h6>100.962 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@snug">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/snug/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>snug</h3>
+                <h6>Delegated SP</h6>
+                <h6>100.857 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@sp33dy">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/sp33dy/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>sp33dy</h3>
+                <h6>I/T Professional gone rogue!</h6>
+                <h6>Delegated SP</h6>
+                <h6>100.252 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/yehey/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@yehey">
+            <div class="card-content">
+              <center>
+                <h3>yehey</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=yehey&approve=1">Vote for Witness</a></h6>
+                <h6>Whoever pursues righteousness and love finds life, prosperity and honor. Proverbs 21:21 - I upvote all Authors with good content everyday. Let's Steeming Today.</h6>
+                <h6>Delegated SP</h6>
+                <h6>100.205 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@knowledges">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/knowledges/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>knowledges</h3>
+                <h6>SCIENCES/TECHNOLOGY/HUMAN/ANIMAL/ECONOMY/UTOPIAN COMMUNITY MANAGER</h6>
+                <h6>Delegated SP</h6>
+                <h6>70.446 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/evildido/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@evildido">
+            <div class="card-content">
+              <center>
+                <h3>evildido</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=evildido&approve=1">Vote for Witness</a></h6>
+                <h6>father, crypto lover, Network security engineer</h6>
+                <h6>Delegated SP</h6>
+                <h6>65.697 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@boole">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/boole/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>boole</h3>
+                <h6>Delegated SP</h6>
+                <h6>50.303 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/jatinhota/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@jatinhota">
+            <div class="card-content">
+              <center>
+                <h3>jatinhota</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=jatinhota&approve=1">Vote for Witness</a></h6>
+                <h6>A witness from India. Core Member of #thealliance Group. Founding Member of @IndiaUnited Community. A Very Helpful Guy.</h6>
+                <h6>Delegated SP</h6>
+                <h6>50.284 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@alexsm">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/alexsm/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>alexsm</h3>
+                <h6>Delegated SP</h6>
+                <h6>40.455 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@vitasource365">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/vitasource365/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>vitasource365</h3>
+                <h6>Delegated SP</h6>
+                <h6>38.357 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@se7en9702">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/se7en9702/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>se7en9702</h3>
+                <h6>Music fanatic, Gamer 🤖🕹️, Comic Addict, Photographer</h6>
+                <h6>Delegated SP</h6>
+                <h6>34.101 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@allowisticartist">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/allowisticartist/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>allowisticartist</h3>
+                <h6>Allowing creativity to flow</h6>
+                <h6>Delegated SP</h6>
+                <h6>29.313 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@kslo">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/kslo/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>kslo</h3>
+                <h6>Security Guru and Crypto N00b</h6>
+                <h6>Delegated SP</h6>
+                <h6>28.580 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@gladh">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/gladh/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>gladh</h3>
+                <h6>Delegated SP</h6>
+                <h6>22.413 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@readante">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/readante/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>readante</h3>
+                <h6>- Utopian-io Moderator - Montana State University PhD Student @ Chemical Engineering</h6>
+                <h6>Delegated SP</h6>
+                <h6>20.093 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@portugalcoin">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/portugalcoin/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>portugalcoin</h3>
+                <h6>Great things in business are never done by one person.They're done by a team of people.</h6>
+                <h6>Delegated SP</h6>
+                <h6>20.046 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@ilvstranger">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/ilvstranger/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>ilvstranger</h3>
+                <h6>sport photographer and graphic designer (also learning some programming)</h6>
+                <h6>Delegated SP</h6>
+                <h6>18.182 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@adfizz">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/adfizz/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>adfizz</h3>
+                <h6>i'm designer, digital art, photo and video editor, mural art</h6>
+                <h6>Delegated SP</h6>
+                <h6>17.151 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@keonkim">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/keonkim/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>keonkim</h3>
+                <h6>cryptocurrency, blockchain</h6>
+                <h6>Delegated SP</h6>
+                <h6>15.045 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@steemfunding">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/steemfunding/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>steemfunding</h3>
+                <h6>for steem activation.</h6>
+                <h6>Delegated SP</h6>
+                <h6>12.128 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@ahmadmangazap">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/ahmadmangazap/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>ahmadmangazap</h3>
+                <h6>This is alt account for @ahmadmanga... Instead of game reviews and stories, this account focuses on memes and other unserious thingies.</h6>
+                <h6>Delegated SP</h6>
+                <h6>12.046 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@lusanamaya">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/lusanamaya/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>lusanamaya</h3>
+                <h6>I Writing About Life, Fashion, Food & Drink, Short Story & Poetry. Lets Enjoy it :)</h6>
+                <h6>Delegated SP</h6>
+                <h6>10.112 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@baroen96">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/baroen96/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>baroen96</h3>
+                <h6>Delegated SP</h6>
+                <h6>10.094 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <center>
+            <picture class="thumbnail">
+              <img src="https://steemitimages.com/u/bobdos/avatar" class="image">
+            </picture>
+          </center>
+          <a target="_blank" href="https://steemit.com/@bobdos">
+            <div class="card-content">
+              <center>
+                <h3>bobdos</h3>
+                <h6><a class="witness" href="https://v2.steemconnect.com/sign/account-witness-vote?witness=bobdos&approve=1">Vote for Witness</a></h6>
+                <h6>STEEM Witness | Game Developer For STEEM</h6>
+                <h6>Delegated SP</h6>
+                <h6>10.081 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@idlebright">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/idlebright/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>idlebright</h3>
+                <h6>Founder @ Byzantine & Node NYC</h6>
+                <h6>Delegated SP</h6>
+                <h6>10.080 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@kriskabiru">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/kriskabiru/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>kriskabiru</h3>
+                <h6>Bad Trips on Scary Journeys</h6>
+                <h6>Delegated SP</h6>
+                <h6>10.074 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@jznsamuel">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/jznsamuel/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>jznsamuel</h3>
+                <h6>Writer | Dreamer | Traveler | Thinker | Somewhat Philosopher | Optimist | OCD Curator | The list is endless, so are life's and steemit's possibilities.</h6>
+                <h6>Delegated SP</h6>
+                <h6>10.066 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@h4ck3rm1k3st33m">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/h4ck3rm1k3st33m/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>h4ck3rm1k3st33m</h3>
+                <h6>Programmer+Sysadmin = Devops?</h6>
+                <h6>Delegated SP</h6>
+                <h6>10.066 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@michaelstellaire">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/michaelstellaire/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>michaelstellaire</h3>
+                <h6>Michaël Stellaire is an artist who explores fingerstyle and modern percussion techniques on the acoustic guitar.</h6>
+                <h6>Delegated SP</h6>
+                <h6>8.070 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@rizal.konoha2">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/rizal.konoha2/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>rizal.konoha2</h3>
+                <h6>Travel | Photography | History | Nature | culture | Design | art</h6>
+                <h6>Delegated SP</h6>
+                <h6>5.057 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@thesteemdream">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/thesteemdream/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>thesteemdream</h3>
+                <h6>A business major born and raised in NYC who's into cryptocurrency and entrepreneurship.</h6>
+                <h6>Delegated SP</h6>
+                <h6>5.047 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@jonesta">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/jonesta/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>jonesta</h3>
+                <h6>I am a musician,All Genre</h6>
+                <h6>Delegated SP</h6>
+                <h6>3.917 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@sisygoboom">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/sisygoboom/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>sisygoboom</h3>
+                <h6>Studying Computer Science in Newcastle, United Kindom. Tech/Utopian - Politics - Crypto - Life - Humour - Creative Writing. Discord: sisygoboom #6775</h6>
+                <h6>Delegated SP</h6>
+                <h6>3.411 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@markhalen">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/markhalen/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>markhalen</h3>
+                <h6>Wise-Wealthy-Soul. If you're improving you're not unimproving. Always improve. ALWAYS!</h6>
+                <h6>Delegated SP</h6>
+                <h6>2.042 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@atika">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/atika/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>atika</h3>
+                <h6>Mama-karma|nurse|mother</h6>
+                <h6>Delegated SP</h6>
+                <h6>2.019 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@blavin">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/blavin/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>blavin</h3>
+                <h6>Uno de los de detras del mundo. La belleza del arte me cautiva, y suele atraparme.</h6>
+                <h6>Delegated SP</h6>
+                <h6>2.014 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@nadro">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/nadro/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>nadro</h3>
+                <h6>I am but a simple man... with a lot of words...</h6>
+                <h6>Delegated SP</h6>
+                <h6>2.012 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@rahmatillah12">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/rahmatillah12/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>rahmatillah12</h3>
+                <h6>Delegated SP</h6>
+                <h6>1.008 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@nudimar">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/nudimar/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>nudimar</h3>
+                <h6>Soul_Surf Coach</h6>
+                <h6>Delegated SP</h6>
+                <h6>1.006 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@gifmaker">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/gifmaker/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>gifmaker</h3>
+                <h6>Delegated SP</h6>
+                <h6>1.005 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@thomasbnt">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/thomasbnt/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>thomasbnt</h3>
+                <h6>Développeur français. Je partage du contenu surtout sur la vie privée, la sécurité informatique, le développement et la nouvelle technologie.</h6>
+                <h6>Delegated SP</h6>
+                <h6>1.004 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@andreistalker">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/andreistalker/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>andreistalker</h3>
+                <h6>Delegated SP</h6>
+                <h6>1.004 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@touhidalam69">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/touhidalam69/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>touhidalam69</h3>
+                <h6>I am a Programmer, Interested in Traveling and watching movie</h6>
+                <h6>Delegated SP</h6>
+                <h6>1.002 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a target="_blank" href="https://steemit.com/@xazid">
+            <center>
+              <picture class="thumbnail">
+                <img src="https://steemitimages.com/u/xazid/avatar" class="image">
+              </picture>
+            </center>
+            <div class="card-content">
+              <center>
+                <h3>xazid</h3>
+                <h6>Online marketer</h6>
+                <h6>Delegated SP</h6>
+                <h6>1.002 SP</h6>
+              </center>
+            </div>
+          </a>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <div id="footer" class="text-light">
+    <div class="container">
+      <h2>Let's make Open Source Economy a reality. Together.</h2>
+      <div class="row mt-5 pb-4">
+        <div class="col-sm mb-4">
+          <a href="https://join.utopian.io" target="_blank"><b>Get started as a contributor</b></a><br> Start contributing to Open Source projects and receive rewards for your contributions.
+        </div>
+        <div class="col-sm">
+          <a href="https://join.utopian.io" target="_blank"><b>Submit your project to Utopian</b></a><br> Get the attention of valuable contributors and use the power of collective intelligence to develop your project.
+        </div>
+      </div>
+      <hr>
+      <div class="row py-4">
+        <div class="col-md-1 footer-logo">
+          <img src="../img/logo.png" class="d-inline-block" style="width: 32px;" alt="Logo">
+        </div>
+        <!-- <div class="col">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://utopian.io/privacy">Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://utopian.io/tos">Terms of Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://utopian.io/cookies">Cookie Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://utopian.io/faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://utopian.io/">Contributions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://utopian.io/tasks">Task Requests</a>
+                    </li>
+                </ul>
+            </div> -->
+        <div class="col">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://join.utopian.io/cookies">Cookie Policy</a> &nbsp;|&nbsp;
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://steemit.com/@utopian-io">Blog</a> &nbsp;|&nbsp;
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://join.utopian.io/guidelines">Guidelines</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 social-icons text-right d-flex align-items-end">
+          <div class="ml-auto">
+            <a href="https://www.facebook.com/utopian.io/" target="_blank">
+                        <svg style="width:32px;height:32px" viewBox="0 0 24 24">
+                            <path fill="#7583a5" d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21h6A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M18,5H15.5A3.5,3.5 0 0,0 12,8.5V11H10V14H12V21H15V14H18V11H15V9A1,1 0 0,1 16,8H18V5Z" />
+                        </svg>
+                    </a>
+            <a href="https://twitter.com/utopian_io" target="_blank">
+                        <svg style="width:32px;height:32px" viewBox="0 0 24 24">
+                            <path fill="#7583a5" d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+                        </svg>
+                    </a>
+            <a href="https://github.com/utopian-io" target="_blank">
+                        <svg style="width:32px;height:32px" viewBox="0 0 24 24">
+                            <path fill="#7583a5" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                    </a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row pt-4">
+        <div class="col text-center disclaimer">
+          ALL INFORMATION ON UTOPIAN AND PROVIDED FROM OR THROUGH USE OF ITS SERVICES DOES NOT CONSTITUTE INVESTMENT ADVICE OR RECOMMENDATION. USERS SHOULD NOT MAKE ANY DECISION, FINANCIAL OR OTHERWISE, WITHOUT UNDERTAKING INDEPENDENT DUE DILIGENCE AND SEEKING
+          PROFESSIONAL FINANCIAL ADVICE.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="scRedirectModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">Login with SteemConnect</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+        </div>
+        <div class="modal-body">
+          You will be redirected to SteemConnect to authenticate to the Steem blockchain. SteemConnect is developed and maintained by Steemit, Inc. and Busy.org. Utopian will never access your private keys.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="https://v2.steemconnect.com/oauth2/authorize?client_id=utopian.app&response_type=code&redirect_uri=https%3A%2F%2Futopian.io%2Fcallback&scope=vote,comment,delete_comment,comment_options,custom_json,claim_reward_balance,offline" class="btn btn-primary">Login with SteemConnect</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="loginInfoModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">Choose a platform!</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            To submit your work, you can use any one of the following Steem-based platforms. Just login and start sharing your contributions or task requests.
+          </p>
+          <div class="text-center my-4">
+            <button type="button" class="btn btn-outline-dark video-button" data-video-id="8S1AtrzYY1Q">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z" />
+                        </svg>
+                        Watch the video to learn more!
+                    </button>
+          </div>
+          <hr class="mb-4">
+          <div class="row text-center mb-3">
+            <div class="col-12 col-lg-4 mb-5 mb-lg-0">
+              <img src="../img/steemit-logo.png" alt="Steemit logo" class="mb-4" />
+              <p class="text-left">Steemit.com is the first social media platform built on the Steem blockchain. It's developed and maintained by Steemit Inc.</p>
+              <a href="https://steemit.com" class="btn btn-outline-dark">Login on steemit.com</a>
+            </div>
+            <div class="col-12 col-lg-4 mb-5 mb-lg-0">
+              <img src="../img/busy-logo.png" alt="Busy logo" class="mb-4" />
+              <p class="text-left">Busy.org (which also cooperates with Steemit Inc.) is the driving force behind a unique and robust social media experience.</p>
+              <a href="https://busy.org" class="btn btn-outline-dark">Login on busy.org</a>
+            </div>
+            <div class="col-12 col-lg-4">
+              <img src="../img/esteem-logo.png" alt="eSteem logo" class="mb-4" />
+              <p class="text-left">The eSteem app is the first native mobile app for the Steem blockchain, available for Android and iOS.</p>
+              <a href="https://esteem.ws" class="btn btn-outline-dark">Download the app</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="steemSignupModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">Create a Steem account</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+        </div>
+        <div class="modal-body">
+          In order to use Utopian you need a Steem account. You will be redirected to the sign-up process of steemit.com. Once your Steem account has been verified and enabled, you may use it for Utopian contributions.<br>
+          <div class="alert alert-danger mt-4">
+            <b>If you lose your password, it can not be restored and you will lose access to your funds!</b><br>
+            <br> Choose a secure password and make sure you keep it safe. You have full responsibility for the security of your account and the rewards you earn.
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="https://signup.utopian.io" class="btn btn-primary">Create a Steem account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function() {
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#4786ff",
+            "text": "#ffffff"
+          },
+          "button": {
+            "background": "transparent",
+            "text": "#fff",
+            "border": "#fff"
+          }
+        },
+        "content": {
+          "href": "https://join.utopian.io/cookies"
+        }
+      })
+    });
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115955870-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-115955870-1');
+  </script>
+
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script type='text/javascript'>
+    (function($) {
+      window.fnames = new Array();
+      window.ftypes = new Array();
+      fnames[0] = 'EMAIL';
+      ftypes[0] = 'email';
+      fnames[1] = 'NAME';
+      ftypes[1] = 'text';
+      fnames[2] = 'PROJECT';
+      ftypes[2] = 'text';
+      fnames[4] = 'PHONE';
+      ftypes[4] = 'phone';
+      fnames[3] = 'QUESTION1';
+      ftypes[3] = 'text';
+      fnames[5] = 'QUESTION2';
+      ftypes[5] = 'text';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+  </script>
+
+</body>
+
+</html>

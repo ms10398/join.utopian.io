@@ -1,0 +1,38 @@
+#header {
+    padding-bottom: 50px;
+    height: auto;
+}
+
+#header h1 {
+    font-size: 2.5rem;
+}
+
+#header div .btn-lg {
+    width: 165px;
+}
+
+#header #subscribe-form {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+#header #subscribe-form h4 {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#header #subscribe-form .lead {
+    font-size: .9rem;
+    color: #999;
+}
+
+#mc_embed_signup div.mce_inline_error {
+    background: transparent;
+    color: #f00;
+    font-weight: normal;
+    padding: 5px 0;
+}
+
+#mc_embed_signup input.mce_inline_error {
+    border-color: #f00;
+}
