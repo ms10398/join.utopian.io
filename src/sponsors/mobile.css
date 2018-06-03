@@ -1,0 +1,30 @@
+@media (max-width: 991px) {
+    #header h2 {
+        font-size: 1.5rem;
+        line-height: 35px;
+    }
+}
+
+@media (max-width: 767px) {
+    #header h1 {
+        padding-top: 120px;
+    }
+
+    #header-text {
+        text-align: center;
+    }
+
+    #header #subscribe-form {
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #header div .btn-lg:first-child,
+    #header div .btn-lg:last-child {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 10px !important;
+        display: block;
+    }
+}
