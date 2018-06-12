@@ -133,9 +133,9 @@
 
   <script type="text/javascript" src="https://cdn.iubenda.com/consent_solution/iubenda_cons.js"></script>
   <script type="text/javascript">
-      _iub.cons.init({
-          api_key: "xyN2wrqdm8sv9K2f760JcCmZ1QRWHhyR"
-      });
+    _iub.cons.init({
+      api_key: "xyN2wrqdm8sv9K2f760JcCmZ1QRWHhyR"
+    });
   </script>
 </head>
 
@@ -294,8 +294,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
   <script>
-
-    let general = `<div>
+    let general =
+      `<div>
       <h3>Policies vs Guidelines</h3>
       <p>
         <b>Policies-</b>Mandatory rules for use of Utopian services and participation in the community. <b>Failing to adhere to one or more of the policies will lead to the immediate rejection of your submission, and may lead to a downvote and / or ban from Utopian services.</b>          <br> <br>
@@ -391,9 +391,12 @@
       </ul>
     </div>`;
 
-    let contributions = `<div>
+    let contributions =
+      `<div>
       <div class="categories">
         <div><a href="javascript:void(0)" id="suggestions" class="circle reverse suggestions" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Suggestions"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M12,2A7,7 0 0,1 19,9C19,11.38 17.81,13.47 16,14.74V17A1,1 0 0,1 15,18H9A1,1 0 0,1 8,17V14.74C6.19,13.47 5,11.38 5,9A7,7 0 0,1 12,2M9,21V20H15V21A1,1 0 0,1 14,22H10A1,1 0 0,1 9,21M12,4A5,5 0 0,0 7,9C7,11.05 8.23,12.81 10,13.58V16H14V13.58C15.77,12.81 17,11.05 17,9A5,5 0 0,0 12,4Z"></path></svg></a>
+        </div>
+        <div><a href="javascript:void(0)" id="translations" class="circle reverse translation" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Translations"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z"></path></svg></a>
         </div>
         <div><a href="javascript:void(0)" id="blogs" class="circle reverse blog" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Blogs"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M15,7H20.5L15,1.5V7M8,0H16L22,6V18A2,2 0 0,1 20,20H8C6.89,20 6,19.1 6,18V2A2,2 0 0,1 8,0M4,4V22H20V24H4A2,2 0 0,1 2,22V4H4Z"></path></svg></a>
         </div>
@@ -419,7 +422,8 @@
       <div id="rules" style="margin-bottom: 50px;"></div>
     </div>`;
 
-    let tasks = `<div>
+    let tasks =
+      `<div>
       <div class="categories">
         <div><a href="javascript:void(0)" id="developers" class="circle reverse development" data-toggle="tooltip" data-placement="right" title="" style="transform: scale(1);" data-original-title="Developers"><svg style="width: 35px; height: 78px;" viewBox="0 0 24 24"><path d="M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6Z"></path></svg> </a>
         </div>
@@ -459,7 +463,7 @@
     let contribbut = document.getElementById('contributions')
     let tasksbut = document.getElementById('tasks')
 
-    generalbut.addEventListener('click', function () {
+    generalbut.addEventListener('click', function() {
       generalbut.classList.add('highlighted')
       contribbut.classList.remove('highlighted')
       tasksbut.classList.remove('highlighted')
@@ -467,7 +471,7 @@
       return false;
     })
 
-    contribbut.addEventListener('click', function () {
+    contribbut.addEventListener('click', function() {
       generalbut.classList.remove('highlighted')
       contribbut.classList.add('highlighted')
       tasksbut.classList.remove('highlighted')
@@ -477,7 +481,7 @@
       return false;
     })
 
-    tasksbut.addEventListener('click', function () {
+    tasksbut.addEventListener('click', function() {
       generalbut.classList.remove('highlighted')
       contribbut.classList.remove('highlighted')
       tasksbut.classList.add('highlighted')
@@ -577,6 +581,9 @@
     let copywriters =
       `<h4>Copywriters</h4><p>Category Tag: task-copywriting</p><p>Category Template: <a href="https://github.com/utopian-io/editor-templates/blob/master/task-requests">View now</a></p><p>Task submissions to this category include <b>requests by Open Source project owners</b> for assistance in <b>updating / creating text copy for their project</b>.</p><ul><li>Submissions should include enough detail to inform contributors what content needs to be written and for what use or purpose.</li><li>Specifications such as word count, tone of message and other linguistic requirements should be included when applicable.</li><li>Submissions should include adequate information on how contributions must be submitted to the project itself, where they can be implemented (such as GitHub) and any deadlines to be met, if applicable.</li></ul>`
 
+    let translations =
+      `<h4>Translations</h4><p>Category Tag: translation</p><p>Category Template: <a href="https://github.com/utopian-io/editor-templates/blob/master/translation">View now</a></p><p>Contributions in this category include <b>original translations created or updated for an active Open Source project.</b></p><ul><li>The translators must be native of the language they are translating.</li><li>Only pre-approved translators will be eligible to submit translations, A translator manager for each specific language is responsible for the selection and approval of translators.</li><li>Applications of users previously banned on Utopian or DaVinci services will not be considered for the role of pre-approved translator in the category.</li><li>Submissions volume should be at least 250 words and should be structured following the template.</li><li>Translation of static text (that should not be translated) like links, code and paths, will lead to a significantly lower score of a contribution, thus reducing its chances of receiving a reward.</li><li>Duplicated strings / text cannot be counted toward the word count impacting the score.</li><li>Full translations are more likely to receive a higher score. Partial translations submitted should be cohesive and consistent with existing translations to other parts of the project.</li><li>If a contributor’s lack of proficiency in the source or target language of the translation is apparent, the submission will not be considered for potential reward, and the user may lose their approval to submit contributions to the category or Utopian.io in whole.</li><li>Translations submitted on CrowdIn should be proofread.</li><li>Submissions must include extensive detail to allow for the proofing of the translation, and list the tools used to manage translation work(when applicable).</li><li>Translations of the same text by different contributors will be accepted <b>only</b> if the moderator can recognise the newest translation as one of higher quality that ones previously submitted.</li><li>Translations of obviously low quality and machine-generated translations will not be considered for potential reward and the user submitting it may be banned.</li><li>Proofreading contributions alone will not be considered for a potential reward.</li></ul>`
+
     window.addEventListener("load", function() {
       window.cookieconsent.initialise({
         "palette": {
@@ -616,6 +623,7 @@
       let designersbut = document.getElementById('designers')
       let copywritersbut = document.getElementById('copywriters')
       let influencersbut = document.getElementById('influencers')
+      let translationsbut = document.getElementById('translations')
       try {
         analysisbut.addEventListener('click', () => {
           $('.circle').removeClass('reverse')
@@ -682,6 +690,12 @@
           visiblebut.classList.add('reverse')
           let rules = document.getElementById('rules')
           rules.innerHTML = visibile;
+        })
+        translationsbut.addEventListener('click', ()=> {
+          $('.circle').removeClass('reverse')
+          translationsbut.classList.add('reverse')
+          let rules = document.getElementById('rules')
+          rules.innerHTML = translations
         })
 
       } catch (e) {
