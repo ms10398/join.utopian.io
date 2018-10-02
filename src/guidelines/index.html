@@ -463,6 +463,8 @@
     let contribbut = document.getElementById('contributions')
     let tasksbut = document.getElementById('tasks')
 
+    let categoryanchor = window.location.hash.substr(1);
+
     generalbut.addEventListener('click', function() {
       generalbut.classList.add('highlighted')
       contribbut.classList.remove('highlighted')
@@ -702,9 +704,16 @@
 
       }
       try {
-        suggestionbut.click();
+        if(categoryanchor){
+          try {
+            document.getElementById(categoryanchor).click();
+          } catch (e) {
+          }
+        } else {
+          suggestionbut.click();
+        }
       } catch (e) {
-
+      
       }
       try {
         analystsbut.addEventListener('click', () => {
@@ -749,6 +758,14 @@
           let tasksrules = document.getElementById('tasksrules')
           tasksrules.innerHTML = influencers;
         })
+      } catch (e) {
+
+      }
+    }
+
+    if(categoryanchor){
+      try {
+        contribbut.click();
       } catch (e) {
 
       }
